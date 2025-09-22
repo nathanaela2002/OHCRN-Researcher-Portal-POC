@@ -1,0 +1,358 @@
+{
+  "table": {
+    "columns": [
+      {
+        "canChangeShow": true,
+        "fieldName": "data.CountyId",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.CountyId",
+        "query": "data { CountyId }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.State",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.State",
+        "query": "data { State }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.County",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.County",
+        "query": "data { County }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.TotalPop",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.TotalPop",
+        "query": "data { TotalPop }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Men",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Men",
+        "query": "data { Men }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Women",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Women",
+        "query": "data { Women }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Hispanic",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Hispanic",
+        "query": "data { Hispanic }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.White",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.White",
+        "query": "data { White }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Black",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Black",
+        "query": "data { Black }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Native",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Native",
+        "query": "data { Native }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Asian",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Asian",
+        "query": "data { Asian }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Pacific",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Pacific",
+        "query": "data { Pacific }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.VotingAgeCitizen",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.VotingAgeCitizen",
+        "query": "data { VotingAgeCitizen }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Income",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Income",
+        "query": "data { Income }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.IncomeErr",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.IncomeErr",
+        "query": "data { IncomeErr }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.IncomePerCap",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.IncomePerCap",
+        "query": "data { IncomePerCap }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.IncomePerCapErr",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.IncomePerCapErr",
+        "query": "data { IncomePerCapErr }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Poverty",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Poverty",
+        "query": "data { Poverty }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.ChildPoverty",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.ChildPoverty",
+        "query": "data { ChildPoverty }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Professional",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Professional",
+        "query": "data { Professional }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Service",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Service",
+        "query": "data { Service }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Office",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Office",
+        "query": "data { Office }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Construction",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Construction",
+        "query": "data { Construction }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Production",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Production",
+        "query": "data { Production }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Drive",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Drive",
+        "query": "data { Drive }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Carpool",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Carpool",
+        "query": "data { Carpool }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Transit",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Transit",
+        "query": "data { Transit }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Walk",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Walk",
+        "query": "data { Walk }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.OtherTransp",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.OtherTransp",
+        "query": "data { OtherTransp }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.WorkAtHome",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.WorkAtHome",
+        "query": "data { WorkAtHome }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.MeanCommute",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.MeanCommute",
+        "query": "data { MeanCommute }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Employed",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Employed",
+        "query": "data { Employed }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.PrivateWork",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.PrivateWork",
+        "query": "data { PrivateWork }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.PublicWork",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.PublicWork",
+        "query": "data { PublicWork }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.SelfEmployed",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.SelfEmployed",
+        "query": "data { SelfEmployed }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.FamilyWork",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.FamilyWork",
+        "query": "data { FamilyWork }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.Unemployment",
+        "show": true,
+        "sortable": true,
+        "jsonPath": "$.data.Unemployment",
+        "query": "data { Unemployment }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.submission_metadata.submitter_id",
+        "show": false,
+        "sortable": true,
+        "jsonPath": "$.data.submission_metadata.submitter_id",
+        "query": "data { submission_metadata { submitter_id } }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.submission_metadata.processing_started",
+        "show": false,
+        "sortable": true,
+        "jsonPath": "$.data.submission_metadata.processing_started",
+        "query": "data { submission_metadata { processing_started } }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.submission_metadata.processed_at",
+        "show": false,
+        "sortable": true,
+        "jsonPath": "$.data.submission_metadata.processed_at",
+        "query": "data { submission_metadata { processed_at } }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.submission_metadata.source_file",
+        "show": false,
+        "sortable": true,
+        "jsonPath": "$.data.submission_metadata.source_file",
+        "query": "data { submission_metadata { source_file } }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.submission_metadata.record_number",
+        "show": false,
+        "sortable": true,
+        "jsonPath": "$.data.submission_metadata.record_number",
+        "query": "data { submission_metadata { record_number } }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.submission_metadata.hostname",
+        "show": false,
+        "sortable": true,
+        "jsonPath": "$.data.submission_metadata.hostname",
+        "query": "data { submission_metadata { hostname } }"
+      },
+      {
+        "canChangeShow": true,
+        "fieldName": "data.submission_metadata.username",
+        "show": false,
+        "sortable": true,
+        "jsonPath": "$.data.submission_metadata.username",
+        "query": "data { submission_metadata { username } }"
+      }
+    ]
+  }
+}

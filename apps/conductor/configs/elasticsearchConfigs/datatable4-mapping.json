@@ -1,0 +1,162 @@
+{
+  "index_patterns": [
+    "datatable4-*"
+  ],
+  "aliases": {
+    "datatable4_centric": {}
+  },
+  "mappings": {
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "CountyId": {
+            "type": "integer"
+          },
+          "State": {
+            "type": "keyword"
+          },
+          "County": {
+            "type": "keyword"
+          },
+          "TotalPop": {
+            "type": "integer"
+          },
+          "Men": {
+            "type": "integer"
+          },
+          "Women": {
+            "type": "integer"
+          },
+          "Hispanic": {
+            "type": "float"
+          },
+          "White": {
+            "type": "float"
+          },
+          "Black": {
+            "type": "float"
+          },
+          "Native": {
+            "type": "float"
+          },
+          "Asian": {
+            "type": "float"
+          },
+          "Pacific": {
+            "type": "integer"
+          },
+          "VotingAgeCitizen": {
+            "type": "integer"
+          },
+          "Income": {
+            "type": "integer"
+          },
+          "IncomeErr": {
+            "type": "integer"
+          },
+          "IncomePerCap": {
+            "type": "integer"
+          },
+          "IncomePerCapErr": {
+            "type": "integer"
+          },
+          "Poverty": {
+            "type": "float"
+          },
+          "ChildPoverty": {
+            "type": "float"
+          },
+          "Professional": {
+            "type": "float"
+          },
+          "Service": {
+            "type": "integer"
+          },
+          "Office": {
+            "type": "float"
+          },
+          "Construction": {
+            "type": "float"
+          },
+          "Production": {
+            "type": "float"
+          },
+          "Drive": {
+            "type": "integer"
+          },
+          "Carpool": {
+            "type": "float"
+          },
+          "Transit": {
+            "type": "float"
+          },
+          "Walk": {
+            "type": "float"
+          },
+          "OtherTransp": {
+            "type": "float"
+          },
+          "WorkAtHome": {
+            "type": "float"
+          },
+          "MeanCommute": {
+            "type": "float"
+          },
+          "Employed": {
+            "type": "integer"
+          },
+          "PrivateWork": {
+            "type": "float"
+          },
+          "PublicWork": {
+            "type": "float"
+          },
+          "SelfEmployed": {
+            "type": "float"
+          },
+          "FamilyWork": {
+            "type": "float"
+          },
+          "Unemployment": {
+            "type": "float"
+          },
+          "submission_metadata": {
+            "type": "object",
+            "properties": {
+              "submitter_id": {
+                "type": "keyword",
+                "null_value": "No Data"
+              },
+              "processing_started": {
+                "type": "date"
+              },
+              "processed_at": {
+                "type": "date"
+              },
+              "source_file": {
+                "type": "keyword",
+                "null_value": "No Data"
+              },
+              "record_number": {
+                "type": "integer"
+              },
+              "hostname": {
+                "type": "keyword",
+                "null_value": "No Data"
+              },
+              "username": {
+                "type": "keyword",
+                "null_value": "No Data"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  }
+}

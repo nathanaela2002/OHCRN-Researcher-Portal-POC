@@ -1,0 +1,226 @@
+{
+  "facets": {
+    "aggregations": [
+      {
+        "active": true,
+        "fieldName": "data__CountyId",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__State",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__County",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__TotalPop",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Men",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Women",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Hispanic",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__White",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Black",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Native",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Asian",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Pacific",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__VotingAgeCitizen",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Income",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__IncomeErr",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__IncomePerCap",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__IncomePerCapErr",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Poverty",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__ChildPoverty",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Professional",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Service",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Office",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Construction",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Production",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Drive",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Carpool",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Transit",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Walk",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__OtherTransp",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__WorkAtHome",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__MeanCommute",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Employed",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__PrivateWork",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__PublicWork",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__SelfEmployed",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__FamilyWork",
+        "show": true
+      },
+      {
+        "active": true,
+        "fieldName": "data__Unemployment",
+        "show": true
+      },
+      {
+        "active": false,
+        "fieldName": "data__submission_metadata__submitter_id",
+        "show": false
+      },
+      {
+        "active": false,
+        "fieldName": "data__submission_metadata__processing_started",
+        "show": false
+      },
+      {
+        "active": false,
+        "fieldName": "data__submission_metadata__processed_at",
+        "show": false
+      },
+      {
+        "active": false,
+        "fieldName": "data__submission_metadata__source_file",
+        "show": false
+      },
+      {
+        "active": false,
+        "fieldName": "data__submission_metadata__record_number",
+        "show": false
+      },
+      {
+        "active": false,
+        "fieldName": "data__submission_metadata__hostname",
+        "show": false
+      },
+      {
+        "active": false,
+        "fieldName": "data__submission_metadata__username",
+        "show": false
+      }
+    ]
+  }
+}

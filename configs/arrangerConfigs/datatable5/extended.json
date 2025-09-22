@@ -1,0 +1,92 @@
+{
+  "extended": [
+    {
+      "displayName": "Region",
+      "fieldName": "data.Region"
+    },
+    {
+      "displayName": "Country",
+      "fieldName": "data.Country"
+    },
+    {
+      "displayName": "Item Type",
+      "fieldName": "data.Item_Type"
+    },
+    {
+      "displayName": "Sales Channel",
+      "fieldName": "data.Sales_Channel"
+    },
+    {
+      "displayName": "Order Priority",
+      "fieldName": "data.Order_Priority"
+    },
+    {
+      "displayName": "Order Date",
+      "fieldName": "data.Order_Date"
+    },
+    {
+      "displayName": "Order ID",
+      "fieldName": "data.Order_ID"
+    },
+    {
+      "displayName": "Ship Date",
+      "fieldName": "data.Ship_Date"
+    },
+    {
+      "displayName": "Units Sold",
+      "fieldName": "data.Units_Sold"
+    },
+    {
+      "displayName": "Unit Price",
+      "fieldName": "data.Unit_Price"
+    },
+    {
+      "displayName": "Unit Cost",
+      "fieldName": "data.Unit_Cost"
+    },
+    {
+      "displayName": "Total Revenue",
+      "fieldName": "data.Total_Revenue"
+    },
+    {
+      "displayName": "Total Cost",
+      "fieldName": "data.Total_Cost"
+    },
+    {
+      "displayName": "Total Profit",
+      "fieldName": "data.Total_Profit"
+    },
+    {
+      "displayName": "Submission Metadata",
+      "fieldName": "data.submission_metadata"
+    },
+    {
+      "displayName": "Submission Metadata Submitter Id",
+      "fieldName": "data.submission_metadata.submitter_id"
+    },
+    {
+      "displayName": "Submission Metadata Processing Started",
+      "fieldName": "data.submission_metadata.processing_started"
+    },
+    {
+      "displayName": "Submission Metadata Processed At",
+      "fieldName": "data.submission_metadata.processed_at"
+    },
+    {
+      "displayName": "Submission Metadata Source File",
+      "fieldName": "data.submission_metadata.source_file"
+    },
+    {
+      "displayName": "Submission Metadata Record Number",
+      "fieldName": "data.submission_metadata.record_number"
+    },
+    {
+      "displayName": "Submission Metadata Hostname",
+      "fieldName": "data.submission_metadata.hostname"
+    },
+    {
+      "displayName": "Submission Metadata Username",
+      "fieldName": "data.submission_metadata.username"
+    }
+  ]
+}

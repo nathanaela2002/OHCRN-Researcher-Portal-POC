@@ -1,0 +1,78 @@
+Elasticsearch Bulk Operation Error Log
+Index: datatable3-index
+Timestamp: 2025-09-19T20:10:40.550Z
+Total Errors: 5
+
+ERROR PATTERNS:
+================
+
+1. mapper_parsing_exception in field "data.Position"
+   Reason: Expected integer, but got string values
+   Count: 5 records
+   Sample values: NC, DQ
+   Sample documents: nY-ZY5kBTaiZB_mJr7HE, no-ZY5kBTaiZB_mJr7HE, so-ZY5kBTaiZB_mJr7HE
+
+
+DETAILED ERRORS:
+=================
+
+Record 37:
+  Document ID: nY-ZY5kBTaiZB_mJr7HE
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'nY-ZY5kBTaiZB_mJr7HE'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 38:
+  Document ID: no-ZY5kBTaiZB_mJr7HE
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'no-ZY5kBTaiZB_mJr7HE'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 58:
+  Document ID: so-ZY5kBTaiZB_mJr7HE
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'so-ZY5kBTaiZB_mJr7HE'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 59:
+  Document ID: s4-ZY5kBTaiZB_mJr7HE
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 's4-ZY5kBTaiZB_mJr7HE'. Preview of field's value: 'DQ'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"DQ\""
+  }
+}
+
+Record 78:
+  Document ID: xo-ZY5kBTaiZB_mJr7HE
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'xo-ZY5kBTaiZB_mJr7HE'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+

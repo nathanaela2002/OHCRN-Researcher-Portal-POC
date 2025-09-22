@@ -1,0 +1,184 @@
+{
+  "extended": [
+    {
+      "displayName": "CountyId",
+      "fieldName": "data.CountyId"
+    },
+    {
+      "displayName": "State",
+      "fieldName": "data.State"
+    },
+    {
+      "displayName": "County",
+      "fieldName": "data.County"
+    },
+    {
+      "displayName": "TotalPop",
+      "fieldName": "data.TotalPop"
+    },
+    {
+      "displayName": "Men",
+      "fieldName": "data.Men"
+    },
+    {
+      "displayName": "Women",
+      "fieldName": "data.Women"
+    },
+    {
+      "displayName": "Hispanic",
+      "fieldName": "data.Hispanic"
+    },
+    {
+      "displayName": "White",
+      "fieldName": "data.White"
+    },
+    {
+      "displayName": "Black",
+      "fieldName": "data.Black"
+    },
+    {
+      "displayName": "Native",
+      "fieldName": "data.Native"
+    },
+    {
+      "displayName": "Asian",
+      "fieldName": "data.Asian"
+    },
+    {
+      "displayName": "Pacific",
+      "fieldName": "data.Pacific"
+    },
+    {
+      "displayName": "VotingAgeCitizen",
+      "fieldName": "data.VotingAgeCitizen"
+    },
+    {
+      "displayName": "Income",
+      "fieldName": "data.Income"
+    },
+    {
+      "displayName": "IncomeErr",
+      "fieldName": "data.IncomeErr"
+    },
+    {
+      "displayName": "IncomePerCap",
+      "fieldName": "data.IncomePerCap"
+    },
+    {
+      "displayName": "IncomePerCapErr",
+      "fieldName": "data.IncomePerCapErr"
+    },
+    {
+      "displayName": "Poverty",
+      "fieldName": "data.Poverty"
+    },
+    {
+      "displayName": "ChildPoverty",
+      "fieldName": "data.ChildPoverty"
+    },
+    {
+      "displayName": "Professional",
+      "fieldName": "data.Professional"
+    },
+    {
+      "displayName": "Service",
+      "fieldName": "data.Service"
+    },
+    {
+      "displayName": "Office",
+      "fieldName": "data.Office"
+    },
+    {
+      "displayName": "Construction",
+      "fieldName": "data.Construction"
+    },
+    {
+      "displayName": "Production",
+      "fieldName": "data.Production"
+    },
+    {
+      "displayName": "Drive",
+      "fieldName": "data.Drive"
+    },
+    {
+      "displayName": "Carpool",
+      "fieldName": "data.Carpool"
+    },
+    {
+      "displayName": "Transit",
+      "fieldName": "data.Transit"
+    },
+    {
+      "displayName": "Walk",
+      "fieldName": "data.Walk"
+    },
+    {
+      "displayName": "OtherTransp",
+      "fieldName": "data.OtherTransp"
+    },
+    {
+      "displayName": "WorkAtHome",
+      "fieldName": "data.WorkAtHome"
+    },
+    {
+      "displayName": "MeanCommute",
+      "fieldName": "data.MeanCommute"
+    },
+    {
+      "displayName": "Employed",
+      "fieldName": "data.Employed"
+    },
+    {
+      "displayName": "PrivateWork",
+      "fieldName": "data.PrivateWork"
+    },
+    {
+      "displayName": "PublicWork",
+      "fieldName": "data.PublicWork"
+    },
+    {
+      "displayName": "SelfEmployed",
+      "fieldName": "data.SelfEmployed"
+    },
+    {
+      "displayName": "FamilyWork",
+      "fieldName": "data.FamilyWork"
+    },
+    {
+      "displayName": "Unemployment",
+      "fieldName": "data.Unemployment"
+    },
+    {
+      "displayName": "Submission Metadata",
+      "fieldName": "data.submission_metadata"
+    },
+    {
+      "displayName": "Submission Metadata Submitter Id",
+      "fieldName": "data.submission_metadata.submitter_id"
+    },
+    {
+      "displayName": "Submission Metadata Processing Started",
+      "fieldName": "data.submission_metadata.processing_started"
+    },
+    {
+      "displayName": "Submission Metadata Processed At",
+      "fieldName": "data.submission_metadata.processed_at"
+    },
+    {
+      "displayName": "Submission Metadata Source File",
+      "fieldName": "data.submission_metadata.source_file"
+    },
+    {
+      "displayName": "Submission Metadata Record Number",
+      "fieldName": "data.submission_metadata.record_number"
+    },
+    {
+      "displayName": "Submission Metadata Hostname",
+      "fieldName": "data.submission_metadata.hostname"
+    },
+    {
+      "displayName": "Submission Metadata Username",
+      "fieldName": "data.submission_metadata.username"
+    }
+  ]
+}

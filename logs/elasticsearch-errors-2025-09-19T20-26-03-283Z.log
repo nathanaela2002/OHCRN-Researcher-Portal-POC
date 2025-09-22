@@ -1,0 +1,198 @@
+Elasticsearch Bulk Operation Error Log
+Index: datatable3-index
+Timestamp: 2025-09-19T20:26:03.283Z
+Total Errors: 15
+
+ERROR PATTERNS:
+================
+
+1. mapper_parsing_exception in field "data.Position"
+   Reason: Expected integer, but got string values
+   Count: 15 records
+   Sample values: NC, DQ
+   Sample documents: o2KnY5kBUpC2dcfLxEZG, pGKnY5kBUpC2dcfLxEZG, pWKnY5kBUpC2dcfLxEZG
+
+
+DETAILED ERRORS:
+=================
+
+Record 14:
+  Document ID: o2KnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'o2KnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 15:
+  Document ID: pGKnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'pGKnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 16:
+  Document ID: pWKnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'pWKnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 17:
+  Document ID: pmKnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'pmKnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 18:
+  Document ID: p2KnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'p2KnY5kBUpC2dcfLxEZG'. Preview of field's value: 'DQ'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"DQ\""
+  }
+}
+
+Record 37:
+  Document ID: umKnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'umKnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 38:
+  Document ID: u2KnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'u2KnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 54:
+  Document ID: y2KnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'y2KnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 55:
+  Document ID: zGKnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'zGKnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 56:
+  Document ID: zWKnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'zWKnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 57:
+  Document ID: zmKnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'zmKnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 58:
+  Document ID: z2KnY5kBUpC2dcfLxEZG
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'z2KnY5kBUpC2dcfLxEZG'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 76:
+  Document ID: 4WKnY5kBUpC2dcfLxEZI
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '4WKnY5kBUpC2dcfLxEZI'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 77:
+  Document ID: 4mKnY5kBUpC2dcfLxEZI
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '4mKnY5kBUpC2dcfLxEZI'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 78:
+  Document ID: 42KnY5kBUpC2dcfLxEZI
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '42KnY5kBUpC2dcfLxEZI'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+

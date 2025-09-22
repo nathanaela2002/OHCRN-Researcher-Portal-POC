@@ -1,0 +1,138 @@
+Elasticsearch Bulk Operation Error Log
+Index: datatable3-index
+Timestamp: 2025-09-19T20:10:40.171Z
+Total Errors: 10
+
+ERROR PATTERNS:
+================
+
+1. mapper_parsing_exception in field "data.Position"
+   Reason: Expected integer, but got string values
+   Count: 10 records
+   Sample values: NC
+   Sample documents: 1o-ZY5kBTaiZB_mJrbDQ, 14-ZY5kBTaiZB_mJrbDQ, 6Y-ZY5kBTaiZB_mJrbDR
+
+
+DETAILED ERRORS:
+=================
+
+Record 38:
+  Document ID: 1o-ZY5kBTaiZB_mJrbDQ
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '1o-ZY5kBTaiZB_mJrbDQ'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 39:
+  Document ID: 14-ZY5kBTaiZB_mJrbDQ
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '14-ZY5kBTaiZB_mJrbDQ'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 57:
+  Document ID: 6Y-ZY5kBTaiZB_mJrbDR
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '6Y-ZY5kBTaiZB_mJrbDR'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 58:
+  Document ID: 6o-ZY5kBTaiZB_mJrbDR
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '6o-ZY5kBTaiZB_mJrbDR'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 76:
+  Document ID: _I-ZY5kBTaiZB_mJrbDR
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '_I-ZY5kBTaiZB_mJrbDR'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 77:
+  Document ID: _Y-ZY5kBTaiZB_mJrbDR
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '_Y-ZY5kBTaiZB_mJrbDR'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 78:
+  Document ID: _o-ZY5kBTaiZB_mJrbDR
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id '_o-ZY5kBTaiZB_mJrbDR'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 96:
+  Document ID: EI-ZY5kBTaiZB_mJrbHR
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'EI-ZY5kBTaiZB_mJrbHR'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 97:
+  Document ID: EY-ZY5kBTaiZB_mJrbHR
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'EY-ZY5kBTaiZB_mJrbHR'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
+Record 98:
+  Document ID: Eo-ZY5kBTaiZB_mJrbHR
+  Status: 400
+  Error: {
+  "type": "mapper_parsing_exception",
+  "reason": "failed to parse field [data.Position] of type [integer] in document with id 'Eo-ZY5kBTaiZB_mJrbHR'. Preview of field's value: 'NC'",
+  "caused_by": {
+    "type": "number_format_exception",
+    "reason": "For input string: \"NC\""
+  }
+}
+
