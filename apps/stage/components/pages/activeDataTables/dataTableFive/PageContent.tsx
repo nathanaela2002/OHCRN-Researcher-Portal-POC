@@ -28,6 +28,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import useUrlParamState from '@/global/hooks/useUrlParamsState';
 
+import ChartsLayout from './ChartsLayout';
 import Facets from './Facets';
 import QueryBar from './QueryBar';
 import RepoTable from './RepoTable';
@@ -115,6 +116,7 @@ const PageContent = () => {
 							`}
 						>
 							<QueryBar />
+							<ChartsLayout />
 							<RepoTable />
 						</div>
 					</div>
