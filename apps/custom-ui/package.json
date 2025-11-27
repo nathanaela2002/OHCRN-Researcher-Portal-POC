@@ -1,0 +1,31 @@
+{
+  "name": "custom-ui",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3002",
+    "build": "tsc && vite build",
+    "preview": "vite preview --port 3002"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@overture-stack/arranger-components": "^3.0.0-beta.37",
+    "@types/url-join": "^5.0.0",
+    "axios": "^1.13.2",
+    "query-string": "^8.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "url-join": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^17.0.83",
+    "@types/react-dom": "^17.0.26",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-node-polyfills": "^0.24.0"
+  }
+}
