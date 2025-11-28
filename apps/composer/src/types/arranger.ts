@@ -13,6 +13,7 @@ export interface ArrangerBaseConfig {
 export interface ExtendedField {
   displayName: string;
   fieldName: string;
+  aggsType?: string;
   isArray?: boolean;
 }
 
@@ -45,5 +46,17 @@ export interface FacetAggregation {
 export interface ArrangerFacetsConfig {
   facets: {
     aggregations: FacetAggregation[];
+  };
+}
+
+export interface BarAggregation {
+  active: boolean;
+  fieldName: string;
+  show: boolean;
+}
+
+export interface ArrangerChartsConfig {
+  charts: {
+    aggregations: BarAggregation[];
   };
 }

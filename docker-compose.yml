@@ -166,7 +166,7 @@ services:
   # ------------------------------------------------------------------------------------#
   arranger-datatable1:
     profiles: ["phase1", "phase2", "phase3", "stageDev", "default"]
-    image: ghcr.io/overture-stack/arranger-server:3.0.0-beta.36
+    image: ghcr.io/overture-stack/arranger-server:latest
     container_name: arranger-datatable1
     platform: linux/amd64
     depends_on:
@@ -191,7 +191,7 @@ services:
 
   arranger-datatable2:
     profiles: ["phase1", "phase2", "phase3", "stageDev", "default"]
-    image: ghcr.io/overture-stack/arranger-server:3.0.0-beta.36
+    image: ghcr.io/overture-stack/arranger-server:latest
     container_name: arranger-datatable2
     platform: linux/amd64
     depends_on:
@@ -216,7 +216,7 @@ services:
 
   arranger-datatable3:
     profiles: ["phase1", "phase2", "phase3", "stageDev", "default"]
-    image: ghcr.io/overture-stack/arranger-server:3.0.0-beta.36
+    image: ghcr.io/overture-stack/arranger-server:latest
     container_name: arranger-datatable3
     platform: linux/amd64
     depends_on:
@@ -242,7 +242,10 @@ services:
   arranger-datatable4:
 
     profiles: ["phase1", "phase2", "phase3", "stageDev", "default"]
-    image: ghcr.io/overture-stack/arranger-server:3.0.0-beta.36
+    build:
+      context: ../arranger
+      dockerfile: ./docker/Dockerfile.local
+      target: server
     container_name: arranger-datatable4
     platform: linux/amd64
     depends_on:
@@ -267,7 +270,10 @@ services:
 
   arranger-datatable5:
     profiles: ["phase1", "phase2", "phase3", "stageDev", "default"]
-    image: ghcr.io/overture-stack/arranger-server:3.0.0-beta.36
+    build:
+      context: ../arranger
+      dockerfile: ./docker/Dockerfile.local
+      target: server
     container_name: arranger-datatable5
     platform: linux/amd64
     depends_on:
@@ -745,7 +751,7 @@ services:
   # ------------------------------------------------------------------------------------#
   arranger-molecular:
     profiles: ["phase3", "stageDev", "default"]
-    image: ghcr.io/overture-stack/arranger-server:3.0.0-beta.36
+    image: ghcr.io/overture-stack/arranger-server:latest
     container_name: arranger-molecular
     platform: linux/amd64
     depends_on:

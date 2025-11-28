@@ -24,3 +24,4 @@ ajax.interceptors.request.use(
 
 export default ajax;
 
+

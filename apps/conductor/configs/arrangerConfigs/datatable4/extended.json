@@ -1,184 +1,119 @@
 {
   "extended": [
     {
-      "displayName": "CountyId",
-      "fieldName": "data.CountyId"
+      "displayName": "ParticipantId",
+      "fieldName": "data.participantId",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "State",
-      "fieldName": "data.State"
+      "displayName": "BirthSex",
+      "fieldName": "data.birthSex",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "County",
-      "fieldName": "data.County"
+      "displayName": "Gender",
+      "fieldName": "data.gender",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "TotalPop",
-      "fieldName": "data.TotalPop"
+      "displayName": "SelfIdentifiedGender",
+      "fieldName": "data.selfIdentifiedGender",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "Men",
-      "fieldName": "data.Men"
+      "displayName": "TransgenderIdentity",
+      "fieldName": "data.transgenderIdentity",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "Women",
-      "fieldName": "data.Women"
+      "displayName": "Ancestry",
+      "fieldName": "data.ancestry",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "Hispanic",
-      "fieldName": "data.Hispanic"
+      "displayName": "SelfReportedGeneticsClinicVisited",
+      "fieldName": "data.selfReportedGeneticsClinicVisited",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "White",
-      "fieldName": "data.White"
+      "displayName": "SelfReportedMolecularLabVisited",
+      "fieldName": "data.selfReportedMolecularLabVisited",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "Black",
-      "fieldName": "data.Black"
+      "displayName": "HistoryOfCancer",
+      "fieldName": "data.historyOfCancer",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "Native",
-      "fieldName": "data.Native"
+      "displayName": "SelfReportedPrimaryCancerDiagnosis",
+      "fieldName": "data.selfReportedPrimaryCancerDiagnosis",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "Asian",
-      "fieldName": "data.Asian"
+      "displayName": "FamilyHistoryOfCancer",
+      "fieldName": "data.familyHistoryOfCancer",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "Pacific",
-      "fieldName": "data.Pacific"
+      "displayName": "VitalStatus",
+      "fieldName": "data.vitalStatus",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "VotingAgeCitizen",
-      "fieldName": "data.VotingAgeCitizen"
+      "displayName": "SelfReportedClinicianFirstName",
+      "fieldName": "data.selfReportedClinicianFirstName",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "Income",
-      "fieldName": "data.Income"
+      "displayName": "SelfReportedClinicianLastName",
+      "fieldName": "data.selfReportedClinicianLastName",
+      "aggsType": "Aggregations"
     },
     {
-      "displayName": "IncomeErr",
-      "fieldName": "data.IncomeErr"
-    },
-    {
-      "displayName": "IncomePerCap",
-      "fieldName": "data.IncomePerCap"
-    },
-    {
-      "displayName": "IncomePerCapErr",
-      "fieldName": "data.IncomePerCapErr"
-    },
-    {
-      "displayName": "Poverty",
-      "fieldName": "data.Poverty"
-    },
-    {
-      "displayName": "ChildPoverty",
-      "fieldName": "data.ChildPoverty"
-    },
-    {
-      "displayName": "Professional",
-      "fieldName": "data.Professional"
-    },
-    {
-      "displayName": "Service",
-      "fieldName": "data.Service"
-    },
-    {
-      "displayName": "Office",
-      "fieldName": "data.Office"
-    },
-    {
-      "displayName": "Construction",
-      "fieldName": "data.Construction"
-    },
-    {
-      "displayName": "Production",
-      "fieldName": "data.Production"
-    },
-    {
-      "displayName": "Drive",
-      "fieldName": "data.Drive"
-    },
-    {
-      "displayName": "Carpool",
-      "fieldName": "data.Carpool"
-    },
-    {
-      "displayName": "Transit",
-      "fieldName": "data.Transit"
-    },
-    {
-      "displayName": "Walk",
-      "fieldName": "data.Walk"
-    },
-    {
-      "displayName": "OtherTransp",
-      "fieldName": "data.OtherTransp"
-    },
-    {
-      "displayName": "WorkAtHome",
-      "fieldName": "data.WorkAtHome"
-    },
-    {
-      "displayName": "MeanCommute",
-      "fieldName": "data.MeanCommute"
-    },
-    {
-      "displayName": "Employed",
-      "fieldName": "data.Employed"
-    },
-    {
-      "displayName": "PrivateWork",
-      "fieldName": "data.PrivateWork"
-    },
-    {
-      "displayName": "PublicWork",
-      "fieldName": "data.PublicWork"
-    },
-    {
-      "displayName": "SelfEmployed",
-      "fieldName": "data.SelfEmployed"
-    },
-    {
-      "displayName": "FamilyWork",
-      "fieldName": "data.FamilyWork"
-    },
-    {
-      "displayName": "Unemployment",
-      "fieldName": "data.Unemployment"
+      "displayName": "SelfReportedClinicianTitleOrRole",
+      "fieldName": "data.selfReportedClinicianTitleOrRole",
+      "aggsType": "Aggregations"
     },
     {
       "displayName": "Submission Metadata",
-      "fieldName": "data.submission_metadata"
+      "fieldName": "data.submission_metadata",
+      "aggsType": "Aggregations"
     },
     {
       "displayName": "Submission Metadata Submitter Id",
-      "fieldName": "data.submission_metadata.submitter_id"
+      "fieldName": "data.submission_metadata.submitter_id",
+      "aggsType": "Aggregations"
     },
     {
       "displayName": "Submission Metadata Processing Started",
-      "fieldName": "data.submission_metadata.processing_started"
+      "fieldName": "data.submission_metadata.processing_started",
+      "aggsType": "Aggregations"
     },
     {
       "displayName": "Submission Metadata Processed At",
-      "fieldName": "data.submission_metadata.processed_at"
+      "fieldName": "data.submission_metadata.processed_at",
+      "aggsType": "Aggregations"
     },
     {
       "displayName": "Submission Metadata Source File",
-      "fieldName": "data.submission_metadata.source_file"
+      "fieldName": "data.submission_metadata.source_file",
+      "aggsType": "Aggregations"
     },
     {
       "displayName": "Submission Metadata Record Number",
-      "fieldName": "data.submission_metadata.record_number"
+      "fieldName": "data.submission_metadata.record_number",
+      "aggsType": "Aggregations"
     },
     {
       "displayName": "Submission Metadata Hostname",
-      "fieldName": "data.submission_metadata.hostname"
+      "fieldName": "data.submission_metadata.hostname",
+      "aggsType": "Aggregations"
     },
     {
       "displayName": "Submission Metadata Username",
-      "fieldName": "data.submission_metadata.username"
+      "fieldName": "data.submission_metadata.username",
+      "aggsType": "Aggregations"
     }
   ]
 }

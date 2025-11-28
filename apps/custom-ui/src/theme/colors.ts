@@ -13,8 +13,8 @@ const grey = {
 };
 
 const primary = {
-    primary: '#04518C',
-    primary_dark: '#00305D',
+    primary: '#286C77',
+    primary_dark: '#286C77',
 };
 
 export default {

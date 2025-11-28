@@ -7,6 +7,8 @@ import type {
   ArrangerTableConfig,
   FacetAggregation,
   ArrangerFacetsConfig,
+  ArrangerChartsConfig,
+  BarAggregation,
 } from "../types";
 import type { ElasticsearchMapping, ElasticsearchField } from "../types";
 
@@ -189,6 +191,7 @@ function processFields(
     const extendedField: ExtendedField = {
       displayName: formatDisplayName(formattedFieldName),
       fieldName: formattedFieldName,
+      aggsType: "Aggregations",
     };
 
     // Add isArray property for nested type fields
@@ -324,6 +327,7 @@ export function ArrangerConfigs(
   extended: ArrangerExtendedConfig;
   table: ArrangerTableConfig;
   facets: ArrangerFacetsConfig;
+  charts: ArrangerChartsConfig;
 } {
   Logger.info`Generating Arranger configs for index: ${indexName}`;
   Logger.info`Document type: ${documentType}`;
@@ -373,15 +377,14 @@ export function ArrangerConfigs(
     }
 
     // Process fields with or without a base path
-    Logger.info`Using base path: ${
-      basePath.length ? basePath.join(".") : "(none)"
-    }`;
+    Logger.info`Using base path: ${basePath.length ? basePath.join(".") : "(none)"
+      }`;
 
     // Extract fields to process - if we have a base path, use properties from that field
     const fieldsToProcess =
       basePath.length > 0
         ? (mappingProperties[basePath[0]] as ElasticsearchField).properties ||
-          {}
+        {}
         : mappingProperties;
 
     // Process the fields, passing along the field type map
@@ -412,6 +415,20 @@ export function ArrangerConfigs(
       facets: {
         facets: {
           aggregations: facetAggregations,
+        },
+      },
+      charts: {
+        charts: {
+          aggregations: facetAggregations
+            .filter((agg) => agg.fieldName === "data__Region")
+            .map(
+              (agg) =>
+              ({
+                active: agg.active,
+                fieldName: agg.fieldName,
+                show: agg.show,
+              } as BarAggregation)
+            ),
         },
       },
     };

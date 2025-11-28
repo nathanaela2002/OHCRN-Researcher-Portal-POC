@@ -3,187 +3,81 @@
     "aggregations": [
       {
         "active": true,
-        "fieldName": "data__CountyId",
+        "fieldName": "data__participantId",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__State",
+        "fieldName": "data__birthSex",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__County",
+        "fieldName": "data__gender",
+        "show": true,
+        "type": "keyword",
+        "aggregation": "terms"
+      },
+      {
+        "active": true,
+        "fieldName": "data__selfIdentifiedGender",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__TotalPop",
+        "fieldName": "data__transgenderIdentity",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__Men",
+        "fieldName": "data__ancestry",
+        "show": true,
+        "type": "keyword",
+        "aggregation": "terms"
+      },
+      {
+        "active": true,
+        "fieldName": "data__selfReportedGeneticsClinicVisited",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__Women",
+        "fieldName": "data__selfReportedMolecularLabVisited",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__Hispanic",
+        "fieldName": "data__historyOfCancer",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__White",
+        "fieldName": "data__selfReportedPrimaryCancerDiagnosis",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__Black",
+        "fieldName": "data__familyHistoryOfCancer",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__Native",
+        "fieldName": "data__vitalStatus",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__Asian",
+        "fieldName": "data__selfReportedClinicianFirstName",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__Pacific",
+        "fieldName": "data__selfReportedClinicianLastName",
         "show": true
       },
       {
         "active": true,
-        "fieldName": "data__VotingAgeCitizen",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Income",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__IncomeErr",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__IncomePerCap",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__IncomePerCapErr",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Poverty",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__ChildPoverty",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Professional",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Service",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Office",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Construction",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Production",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Drive",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Carpool",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Transit",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Walk",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__OtherTransp",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__WorkAtHome",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__MeanCommute",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Employed",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__PrivateWork",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__PublicWork",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__SelfEmployed",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__FamilyWork",
-        "show": true
-      },
-      {
-        "active": true,
-        "fieldName": "data__Unemployment",
+        "fieldName": "data__selfReportedClinicianTitleOrRole",
         "show": true
       },
       {

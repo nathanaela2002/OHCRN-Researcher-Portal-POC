@@ -5,10 +5,14 @@ import { ReactElement, useEffect, useState } from 'react';
 import createArrangerFetcher from './utils/arrangerFetcher';
 import defaultTheme from './theme';
 
+import PageContent from './pages/PageContent';
+import ErrorBoundary from './components/ErrorBoundary';
+import Footer from './components/Footer';
+import Header from './components/Header';
+
 const arrangerFetcher = createArrangerFetcher({
-	ARRANGER_API: 'http://localhost:5054',
+	ARRANGER_API: 'http://localhost:5053',
 });
-import Facets from './components/Facets';
 
 const configsQuery = `
 	query ($documentType: String!, $index: String!) {
@@ -20,7 +24,7 @@ const App = (): ReactElement => {
 	const [arrangerHasConfig, setArrangerHasConfig] = useState<boolean>(false);
 	const [loadingArrangerConfig, setLoadingArrangerConfig] = useState<boolean>(true);
 	const documentType = 'file';
-	const index = 'datatable5_centric';
+	const index = 'datatable4_centric';
 
 	useEffect(() => {
 		arrangerFetcher({
@@ -60,7 +64,27 @@ const App = (): ReactElement => {
 
 	return (
 		<ThemeProvider theme={defaultTheme}>
-			<div>
+			<div
+				css={css`
+					display: flex;
+					flex-direction: column;
+					min-height: 100vh;
+				`}
+			>
+				<div
+					css={css`
+						position: sticky;
+						top: 0;
+						z-index: 2;
+					`}
+				>
+					<Header />
+				</div>
+				<div
+					css={css`
+						flex: 1;
+					`}
+				>
 				{loadingArrangerConfig ? (
 					<div
 						css={css`
@@ -101,64 +125,30 @@ const App = (): ReactElement => {
 						</div>
 					</div>
 				) : (
-					<ArrangerDataProvider
-						apiUrl="http://localhost:5054"
-						customFetcher={arrangerFetcher}
-						documentType={documentType}
-						theme={{
-							colors: {
-								common: {
-									black: '#000000',
+					<ErrorBoundary>
+						<ArrangerDataProvider
+							apiUrl="http://localhost:5053"
+							customFetcher={arrangerFetcher}
+							documentType={documentType}
+							theme={{
+								colors: {
+									common: {
+										black: '#000000',
+									},
 								},
-							},
-							components: {
-								Loader: {
-									size: '20px',
+								components: {
+									Loader: {
+										size: '20px',
+									},
 								},
-							},
-						}}
-					>
-						<div
-							css={css`
-							display: flex;
-							height: 100vh;
-						`}
+							}}
 						>
-							<aside
-								css={css`
-								flex: 0 0 300px;
-								flex-direction: column;
-								background-color: #ffffff;
-								z-index: 1;
-								height: 100vh;
-								overflow-y: scroll;
-								border-right: 1px solid #ccc;
-							`}
-							>
-								<Facets />
-							</aside>
-							<div
-								css={css`
-								display: flex;
-								flex-direction: column;
-								width: 100%;
-								height: 100vh;
-								overflow-y: scroll;
-							`}
-							>
-								<div
-									css={css`
-									flex: 8.5;
-									margin: 0 15px 0 15px;
-									padding: 20px;
-								`}
-								>
-									<h1>custom</h1>
-								</div>
-							</div>
-						</div>
-					</ArrangerDataProvider>
+							<PageContent />
+						</ArrangerDataProvider>
+					</ErrorBoundary>
 				)}
+				</div>
+				<Footer />
 			</div>
 		</ThemeProvider>
 	);
