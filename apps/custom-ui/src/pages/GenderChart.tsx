@@ -26,7 +26,7 @@ import { ReactElement } from 'react';
 import { CustomUIThemeInterface } from '../theme';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-const RegionChart = (): ReactElement => {
+const GenderChart = (): ReactElement => {
     const theme = useTheme() as CustomUIThemeInterface;
 
     return (
@@ -35,22 +35,23 @@ const RegionChart = (): ReactElement => {
 				padding: 15px;
 				background-color: ${theme.colors.white};
 				border-radius: 8px;
-				${theme.shadow.default};
+				border: 1px solid #BABCC2;
 				margin: 15px 0;
 			`}
         >
             <h3
                 css={css`
 					margin: 0 0 10px 0;
-					color: ${theme.colors.primary};
+					color: ${theme.colors.black};
 					font-size: 15px;
 					font-weight: 600;
+					font-family: 'Montserrat', sans-serif;
 				`}
             >
                 Gender Distribution
             </h3>
 
-            <div style={{ height: '170px' }}>
+            <div style={{ height: '173px' }}>
                 <ErrorBoundary>
                     <ChartsProvider debugMode={false} loadingDelay={0}>
                         <ChartsThemeProvider>
@@ -74,4 +75,4 @@ const RegionChart = (): ReactElement => {
     );
 };
 
-export default RegionChart;
+export default GenderChart;

@@ -24,13 +24,13 @@ import { css, useTheme } from '@emotion/react';
 import { ReactElement } from 'react';
 import { CustomUIThemeInterface } from '../theme';
 
-import RegionChart from './RegionChart';
-import ItemTypeChart from './ItemTypeChart';
+import GenderChart from './GenderChart';
+import AncestryChart from './AncestryChart';
 import BirthSexChart from './BirthSexChart';
 import FamilyHistoryChart from './FamilyHistoryChart';
 import TransgenderIdentityChart from './TransgenderIdentityChart';
-import GeneticsClinicChart from './GeneticsClinicChart';
-import MolecularLabChart from './MolecularLabChart';
+import GeneticsClinicVisitedChart from './GeneticsClinicVisitedChart';
+import MolecularLabVisitedChart from './MolecularLabVisitedChart';
 import HistoryOfCancerChart from './HistoryOfCancerChart';
 import VitalStatusChart from './VitalStatusChart';
 
@@ -41,6 +41,10 @@ const ChartsLayout = (): ReactElement => {
 		<div
 			css={css`
 				margin: 15px 0;
+				background-color: ${theme.colors.white};
+				border-radius: 8px;
+				border: 1px solid #BABCC2;
+				padding: 15px;
 			`}
 		>
 			<div
@@ -48,7 +52,8 @@ const ChartsLayout = (): ReactElement => {
 					display: grid;
 					grid-template-columns: repeat(4, 1fr);
 					gap: 15px;
-					margin-bottom: 20px;
+					margin-bottom: -10px;
+					margin-top: -10px;
 					@media (max-width: 1400px) {
 						grid-template-columns: repeat(2, 1fr);
 					}
@@ -58,10 +63,10 @@ const ChartsLayout = (): ReactElement => {
 				`}
 			>
 				<div>
-					<RegionChart />
+					<GenderChart />
 				</div>
 				<div>
-					<ItemTypeChart />
+					<AncestryChart />
 				</div>
 				<div>
 					<BirthSexChart />
@@ -74,9 +79,9 @@ const ChartsLayout = (): ReactElement => {
 			<div
 				css={css`
 					display: grid;
-					grid-template-columns: repeat(3, 1fr);
+					grid-template-columns: 2fr 1fr 1fr;
 					gap: 20px;
-					margin-bottom: 20px;
+					margin-bottom: -10px;
 					@media (max-width: 1200px) {
 						grid-template-columns: repeat(2, 1fr);
 					}
@@ -86,13 +91,13 @@ const ChartsLayout = (): ReactElement => {
 				`}
 			>
 				<div>
+					<GeneticsClinicVisitedChart />
+				</div>
+				<div>
 					<TransgenderIdentityChart />
 				</div>
 				<div>
-					<GeneticsClinicChart />
-				</div>
-				<div>
-					<MolecularLabChart />
+					<MolecularLabVisitedChart />
 				</div>
 			</div>
 
@@ -104,6 +109,7 @@ const ChartsLayout = (): ReactElement => {
 					@media (max-width: 1200px) {
 						grid-template-columns: 1fr;
 					}
+					margin-bottom: -10px;
 				`}
 			>
 				<div>

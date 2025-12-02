@@ -112,11 +112,11 @@ const QueryBar = (): ReactElement => {
 				margin: 10px 0;
 				background-color: ${theme.colors.white};
 				border-radius: 5px;
-				${theme.shadow.default};
+				border: 1px solid #BABCC2;
 				padding: 10px;
 			`}
 		>
-			<SQONViewer />
+			<SQONViewer emptyMessage="Explore data by selecting filters." />
 		</div>
 	);
 };

@@ -26,14 +26,15 @@ import { Aggregations, QuickSearch, useArrangerTheme } from '@overture-stack/arr
 import { UseThemeContextProps } from '@overture-stack/arranger-components/dist/types';
 import { ReactElement } from 'react';
 
-const getAggregationsStyles = (theme: StageThemeInterface): UseThemeContextProps => ({
-	callerName: 'Explorer-Facets',
-	components: {
-		Aggregations: {
-			ActionIcon: {
-				fill: theme.colors.secondary,
-			},
-			AggsGroup: {
+const getAggregationsStyles = (theme: StageThemeInterface): UseThemeContextProps =>
+	({
+		callerName: 'Explorer-Facets',
+		components: {
+			Aggregations: {
+				ActionIcon: {
+					fill: theme.colors.secondary,
+				},
+				AggsGroup: {
 				collapsedBackground: theme.colors.grey_2,
 				css: css`
 					.title {
@@ -211,7 +212,7 @@ const getAggregationsStyles = (theme: StageThemeInterface): UseThemeContextProps
 			},
 		},
 	},
-});
+} as UseThemeContextProps);
 
 const Facets = (): ReactElement => {
 	const { NEXT_PUBLIC_ENABLE_MOLECULAR_QUICKSEARCH } = getConfig();

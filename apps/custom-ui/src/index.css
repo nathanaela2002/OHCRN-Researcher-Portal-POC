@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -22,4 +24,23 @@ body {
 #root {
   width: 100%;
   height: 100vh;
+}
+
+/* Override Arranger-generated aside containers to ensure full height */
+aside[class*="css-"] {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  overflow-y: auto !important;
+}
+
+/* Custom tooltip positioning for Nivo charts - position to the right and keep fixed */
+div[class*="nivo-tooltip"] {
+  transform: translate(10px, -50%) !important;
+  left: 100% !important;
+  right: auto !important;
+}
+
+/* Ensure tooltip wrapper positions correctly */
+div[style*="transform"][style*="opacity"] {
+  pointer-events: none !important;
 }

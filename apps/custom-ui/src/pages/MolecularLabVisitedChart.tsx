@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 import { CustomUIThemeInterface } from '../theme';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-const SelfIdentifiedGenderChart = (): ReactElement => {
+const MolecularLabVisitedChart = (): ReactElement => {
     const theme = useTheme() as CustomUIThemeInterface;
 
     return (
@@ -14,31 +14,32 @@ const SelfIdentifiedGenderChart = (): ReactElement => {
 				padding: 20px;
 				background-color: ${theme.colors.white};
 				border-radius: 8px;
-				${theme.shadow.default};
+				border: 1px solid #BABCC2;
 				margin: 15px 0;
 			`}
         >
             <h3
                 css={css`
 					margin: 0 0 20px 0;
-					color: ${theme.colors.primary};
+					color: ${theme.colors.black};
+					font-family: 'Montserrat', sans-serif;
 					font-size: 18px;
 					font-weight: 600;
 				`}
             >
-                Self-Identified Gender
+                Molecular Lab Visited
             </h3>
 
-            <div style={{ height: '300px' }}>
+            <div style={{ height: '180px' }}>
                 <ErrorBoundary>
                     <ChartsProvider debugMode={false} loadingDelay={0}>
                         <ChartsThemeProvider>
                             <BarChart
-                                fieldName="data__selfIdentifiedGender"
+                                fieldName="data__selfReportedMolecularLabVisited"
                                 maxBars={15}
                                 theme={{
                                     axisLeft: {
-                                        legend: 'Gender',
+                                        legend: 'Lab',
                                     },
                                     axisBottom: {
                                         legend: 'Count',
@@ -53,5 +54,5 @@ const SelfIdentifiedGenderChart = (): ReactElement => {
     );
 };
 
-export default SelfIdentifiedGenderChart;
+export default MolecularLabVisitedChart;
 

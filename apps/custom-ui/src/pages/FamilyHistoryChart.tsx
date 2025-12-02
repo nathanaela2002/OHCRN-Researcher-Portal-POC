@@ -14,14 +14,15 @@ const FamilyHistoryChart = (): ReactElement => {
 				padding: 12px;
 				background-color: ${theme.colors.white};
 				border-radius: 8px;
-				${theme.shadow.default};
+				border: 1px solid #BABCC2;
 				margin: 15px 0;
 			`}
         >
             <h3
                 css={css`
 					margin: 0 0 10px 0;
-					color: ${theme.colors.primary};
+					color: ${theme.colors.black};
+					font-family: 'Montserrat', sans-serif;
 					font-size: 14px;
 					font-weight: 600;
 				`}

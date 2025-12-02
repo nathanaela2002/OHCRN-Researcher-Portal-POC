@@ -14,14 +14,15 @@ const VitalStatusChart = (): ReactElement => {
 				padding: 20px;
 				background-color: ${theme.colors.white};
 				border-radius: 8px;
-				${theme.shadow.default};
+				border: 1px solid #BABCC2;
 				margin: 15px 0;
 			`}
         >
             <h3
                 css={css`
 					margin: 0 0 20px 0;
-					color: ${theme.colors.primary};
+					color: ${theme.colors.black};
+					font-family: 'Montserrat', sans-serif;
 					font-size: 18px;
 					font-weight: 600;
 				`}
@@ -29,7 +30,7 @@ const VitalStatusChart = (): ReactElement => {
                 Vital Status
             </h3>
 
-            <div style={{ height: '400px' }}>
+            <div style={{ height: '360px' }}>
                 <ErrorBoundary>
                     <ChartsProvider debugMode={false} loadingDelay={0}>
                         <ChartsThemeProvider>

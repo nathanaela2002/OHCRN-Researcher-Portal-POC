@@ -27,6 +27,7 @@ import { CustomUIThemeInterface } from '../theme';
 import Facets from '../components/Facets';
 import ChartsLayout from './ChartsLayout';
 import QueryBar from './QueryBar';
+import Stats from '../components/Stats';
 
 const PageContent = () => {
 	const theme = useTheme() as CustomUIThemeInterface;
@@ -46,6 +47,8 @@ const PageContent = () => {
 						display: flex;
 						flex-direction: row;
 						margin-left: 0;
+						height: 100vh;
+						max-height: 100vh;
 					`}
 				>
 					<aside
@@ -54,10 +57,13 @@ const PageContent = () => {
 							flex-direction: column;
 							background-color: ${theme.colors.white};
 							z-index: 1;
-							height: 100vh;
-							overflow-y: scroll;
+							height: 100vh !important;
+							max-height: 100vh !important;
+							overflow-y: auto !important;
 							overflow-x: hidden;
 							border-right: 1px solid #ccc;
+							display: flex;
+							flex-direction: column;
 						`}
 					>
 						<Facets />
@@ -80,6 +86,7 @@ const PageContent = () => {
 							`}
 						>
 							<QueryBar />
+							<Stats />
 							<ChartsLayout />
 						</div>
 					</div>

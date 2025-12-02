@@ -22,12 +22,58 @@
 
 import { css, useTheme } from '@emotion/react';
 import { BarChart, ChartsProvider, ChartsThemeProvider } from '@overture-stack/arranger-charts';
-import { ReactElement } from 'react';
+import { useArrangerData } from '@overture-stack/arranger-components';
+import { ReactElement, useEffect, useState } from 'react';
 import { CustomUIThemeInterface } from '../theme';
 import ErrorBoundary from '../components/ErrorBoundary';
+import createArrangerFetcher from '../utils/arrangerFetcher';
+import CustomBarTooltip from '../components/CustomBarTooltip';
 
-const ItemTypeChart = (): ReactElement => {
+const arrangerFetcher = createArrangerFetcher({
+	ARRANGER_API: 'http://localhost:5053',
+});
+
+const ancestryTotalQuery = `
+	query ($sqon: JSON) {
+		file {
+			aggregations(filters: $sqon) {
+				data__ancestry {
+					buckets {
+						key
+					}
+				}
+			}
+		}
+	}
+`;
+
+const AncestryChart = (): ReactElement => {
     const theme = useTheme() as CustomUIThemeInterface;
+    const { sqon } = useArrangerData({ callerName: 'AncestryChart' });
+    const [totalCount, setTotalCount] = useState<number>(0);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        arrangerFetcher({
+            endpoint: 'graphql',
+            body: JSON.stringify({
+                variables: sqon ? { sqon } : {},
+                query: ancestryTotalQuery,
+            }),
+        })
+            .then((response: any) => {
+                const data = response?.data?.file || response?.file;
+                if (data) {
+                    const ancestryBuckets = data.aggregations?.data__ancestry?.buckets || [];
+                    setTotalCount(ancestryBuckets.length);
+                }
+                setLoading(false);
+            })
+            .catch((err: any) => {
+                console.error('Error fetching ancestry total:', err);
+                setLoading(false);
+            });
+    }, [sqon]);
 
     return (
         <div
@@ -35,28 +81,53 @@ const ItemTypeChart = (): ReactElement => {
 				padding: 12px;
 				background-color: ${theme.colors.white};
 				border-radius: 8px;
-				${theme.shadow.default};
+				border: 1px solid #BABCC2;
 				margin: 15px 0;
+				position: relative;
 			`}
         >
             <h3
                 css={css`
 					margin: 0 0 10px 0;
-					color: ${theme.colors.primary};
+					color: ${theme.colors.black};
 					font-size: 14px;
 					font-weight: 600;
+					font-family: 'Montserrat', sans-serif;
 				`}
             >
                 Ancestry Distribution
             </h3>
 
+            {!loading && totalCount > 0 && (
+                <div
+                    css={css`
+						position: absolute;
+						top: 12px;
+						right: 12px;
+						font-size: 10px;
+						color: ${theme.colors.black};
+						font-family: 'Montserrat', sans-serif;
+						font-weight: 600;
+						background-color: #f5f5f5;
+						border-radius: 4px;
+						padding: 4px 8px;
+					`}
+                >
+                    Top 5 of {totalCount}
+                </div>
+            )}
+
             <div style={{ height: '180px' }}>
                 <ErrorBoundary>
                     <ChartsProvider debugMode={false} loadingDelay={0}>
-                        <ChartsThemeProvider>
+                        <ChartsThemeProvider
+                            components={{
+                                TooltipComp: CustomBarTooltip,
+                            }}
+                        >
                             <BarChart
                                 fieldName="data__ancestry"
-                                maxBars={15}
+                                maxBars={5}
                                 theme={{
                                     axisLeft: {
                                         legend: 'Ancestry',
@@ -74,5 +145,4 @@ const ItemTypeChart = (): ReactElement => {
     );
 };
 
-export default ItemTypeChart;
-
+export default AncestryChart;

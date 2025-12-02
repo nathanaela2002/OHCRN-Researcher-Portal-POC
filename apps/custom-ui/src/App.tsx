@@ -83,6 +83,7 @@ const App = (): ReactElement => {
 				<div
 					css={css`
 						flex: 1;
+						background-color: #ffffff;
 					`}
 				>
 				{loadingArrangerConfig ? (

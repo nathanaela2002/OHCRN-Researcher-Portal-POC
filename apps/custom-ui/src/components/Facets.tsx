@@ -116,8 +116,8 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 						content: "";
 						position: absolute;
 
-						top: 0px;
-						bottom: 0px;
+						top: -1px;
+						bottom: -1px;
 
 						left: 0px;
 						right: 0px;
@@ -145,7 +145,7 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 					background: '#B2DDA2',
 					fontSize: '0.75rem',
 					css: css`
-						margin-top: 0.2rem;
+						margin-top: 0.1rem;
 					`,
 				},
 				FilterInput: {
@@ -240,7 +240,6 @@ const Facets = (): ReactElement => {
 			css={css`
 				display: flex;
 				flex-direction: column;
-				height: 100%;
 			`}
 		>
 			<h2
@@ -264,4 +263,3 @@ const Facets = (): ReactElement => {
 };
 
 export default Facets;
-
