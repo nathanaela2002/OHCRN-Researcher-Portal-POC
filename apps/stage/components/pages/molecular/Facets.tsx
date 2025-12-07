@@ -28,13 +28,13 @@ import { ReactElement } from 'react';
 
 const getAggregationsStyles = (theme: StageThemeInterface): UseThemeContextProps =>
 	({
-		callerName: 'Explorer-Facets',
-		components: {
-			Aggregations: {
-				ActionIcon: {
-					fill: theme.colors.secondary,
-				},
-				AggsGroup: {
+	callerName: 'Explorer-Facets',
+	components: {
+		Aggregations: {
+			ActionIcon: {
+				fill: theme.colors.secondary,
+			},
+			AggsGroup: {
 				collapsedBackground: theme.colors.grey_2,
 				css: css`
 					.title {

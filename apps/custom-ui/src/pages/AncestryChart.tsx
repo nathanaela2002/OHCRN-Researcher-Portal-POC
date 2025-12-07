@@ -32,7 +32,7 @@ import { chartFilter } from '../utils/sqonHelpers';
 import { shuffleArray } from '../utils/chartUtils';
 
 const arrangerFetcher = createArrangerFetcher({
-    ARRANGER_API: 'http://localhost:5053',
+	ARRANGER_API: 'http://localhost:5053',
 });
 
 const ancestryTotalQuery = `
