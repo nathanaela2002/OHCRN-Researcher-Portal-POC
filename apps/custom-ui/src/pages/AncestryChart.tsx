@@ -23,65 +23,22 @@
 import { css, useTheme } from '@emotion/react';
 import { BarChart, ChartsProvider, ChartsThemeProvider } from '@overture-stack/arranger-charts';
 import { useArrangerData } from '@overture-stack/arranger-components';
-import { ReactElement, useEffect, useState, useMemo } from 'react';
+import { ReactElement, useMemo } from 'react';
 import { CustomUIThemeInterface } from '../theme';
 import ErrorBoundary from '../components/ErrorBoundary';
-import createArrangerFetcher from '../utils/arrangerFetcher';
 import CustomBarTooltip from '../components/CustomBarTooltip';
 import { chartFilter } from '../utils/sqonHelpers';
 import { shuffleArray } from '../utils/chartUtils';
 
-const arrangerFetcher = createArrangerFetcher({
-	ARRANGER_API: 'http://localhost:5053',
-});
-
-const ancestryTotalQuery = `
-	query ($sqon: JSON) {
-		file {
-			aggregations(filters: $sqon) {
-				data__ancestry {
-					buckets {
-						key
-					}
-				}
-			}
-		}
-	}
-`;
-
 const AncestryChart = (): ReactElement => {
     const theme = useTheme() as CustomUIThemeInterface;
     const { sqon, setSQON } = useArrangerData({ callerName: 'AncestryChart' });
-    const [totalCount, setTotalCount] = useState<number>(0);
-    const [loading, setLoading] = useState(true);
 
     const chartFilters = useMemo(() => ({
         ancestry: chartFilter('data__ancestry', sqon, setSQON),
     }), [sqon, setSQON]);
 
     const shuffledPalette = useMemo(() => shuffleArray(theme.colors.chartPalette), []);
-
-    useEffect(() => {
-        arrangerFetcher({
-            endpoint: 'graphql',
-            body: JSON.stringify({
-                variables: sqon ? { sqon } : {},
-                query: ancestryTotalQuery,
-            }),
-        })
-            .then((response: any) => {
-                const data = response?.data?.file || response?.file;
-                if (data) {
-                    const ancestryBuckets = data.aggregations?.data__ancestry?.buckets || [];
-                    setTotalCount(ancestryBuckets.length);
-                }
-                setLoading(false);
-            })
-            .catch((err: any) => {
-                console.error('Error fetching ancestry total:', err);
-                setLoading(false);
-            });
-    }, [sqon]);
 
     return (
         <div
@@ -105,25 +62,6 @@ const AncestryChart = (): ReactElement => {
             >
                 Ancestry Distribution
             </h3>
-
-            {!loading && totalCount > 0 && (
-                <div
-                    css={css`
-						position: absolute;
-						top: 12px;
-						right: 12px;
-						font-size: 10px;
-						color: ${theme.colors.black};
-						font-family: 'Montserrat', sans-serif;
-						font-weight: 600;
-						background-color: #f5f5f5;
-						border-radius: 4px;
-						padding: 4px 8px;
-					`}
-                >
-                    Top 5 of {totalCount}
-                </div>
-            )}
 
             <div style={{ height: '180px' }}>
                 <ErrorBoundary>

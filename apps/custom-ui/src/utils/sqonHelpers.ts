@@ -17,7 +17,7 @@ const convertFieldNameForFilter = (fieldName: string): string => {
  * @param value - The value to filter by
  * @returns A SQON filter object
  */
-export const createFieldValueFilter = (fieldName: string, value: string | string[]): SQONType => {
+const createFieldValueFilter = (fieldName: string, value: string | string[]): SQONType => {
 	const values = Array.isArray(value) ? value : [value];
 	// Convert field name from aggregation format (__) to filter format (.)
 	const filterFieldName = convertFieldNameForFilter(fieldName);
@@ -139,7 +139,7 @@ const removeFilter = (sqon: SQONType | null, fieldName: string, value: string): 
  * @param value - The value to toggle
  * @returns A new SQON with the filter toggled
  */
-export const toggleSQONFilter = (currentSQON: SQONType | null, fieldName: string, value: string): SQONType | null => {
+const toggleSQONFilter = (currentSQON: SQONType | null, fieldName: string, value: string): SQONType | null => {
 	const filterFieldName = convertFieldNameForFilter(fieldName);
 	
 	// Check if the filter already exists
@@ -159,7 +159,7 @@ export const toggleSQONFilter = (currentSQON: SQONType | null, fieldName: string
  * @param newFilter - The new filter to add
  * @returns A merged SQON filter
  */
-export const mergeSQON = (currentSQON: SQONType | null, newFilter: SQONType): SQONType => {
+const mergeSQON = (currentSQON: SQONType | null, newFilter: SQONType): SQONType => {
 	if (!currentSQON) {
 		// Always wrap in 'and' operation for consistency
 		return {
