@@ -86,6 +86,11 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
                                 flex-shrink: 0; /* Prevent icon from shrinking */
                             }
 
+                            /* Hide microscope icon when filter is collapsed (not expanded) */
+                            &:has(.title-control[title*="expand"]) .filter-icon {
+                                display: none !important;
+                            }
+
                             /* Hide alphabet sort icon */
                             .sorting-icon {
                                 display: none !important;
@@ -263,6 +268,8 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 				MoreOrLessButton: {
 					css: css`
 						font-size: 11px;
+						margin-top: -0.95rem;
+						margin-right: 0.5rem;
 						&::before {
 							padding-top: 3px;
 							margin-right: 3px;
@@ -330,180 +337,109 @@ const Facets = (): ReactElement => {
 	const [isAllExpanded, setIsAllExpanded] = useState(false);
 
 	useEffect(() => {
-		// Debounce function to prevent rapid firing
-		let debounceTimer: NodeJS.Timeout | null = null;
-		const debounce = (fn: () => void, delay: number) => {
-			if (debounceTimer) clearTimeout(debounceTimer);
-			debounceTimer = setTimeout(fn, delay);
+		// Root to observe (you can narrow this if you know a more specific selector)
+		const root: ParentNode = document.body;
+
+		const isMoreButton = (btn: HTMLButtonElement) => {
+			const text = (btn.textContent || '').trim().toLowerCase();
+			return (
+				/\+?\d*\s*more/i.test(text) ||
+				text === 'more' ||
+				text === 'less'
+			);
 		};
 
 		const addSelectAllButtons = () => {
-			// Find all aggregation groups first
-			const aggregationGroups = document.querySelectorAll('[class*="AggsGroup"]');
+			const groups = root.querySelectorAll<HTMLElement>('[class*="AggsGroup"]');
 
-			aggregationGroups.forEach(group => {
-				// Find bucket items in this group
-				const bucketItems = group.querySelectorAll('.bucket-item');
-				if (bucketItems.length === 0) return;
+			groups.forEach(group => {
+				// Need at least one bucket for this group
+				const firstBucket = group.querySelector<HTMLElement>('.bucket-item');
+				if (!firstBucket) return;
 
-				// Check if Select All button already exists - if so, ensure container is at end and More button is in it
-				if (group.querySelector('.custom-select-all-btn')) {
-					const existingContainer = group.querySelector('.custom-buttons-container') as HTMLElement;
-					if (existingContainer) {
-						const container = existingContainer.parentElement;
-						// Ensure container is at the end
-						if (container && container.lastElementChild !== existingContainer) {
-							try {
-								container.appendChild(existingContainer);
-							} catch (e) {
-								// Ignore errors - might be in the middle of React updates
-							}
-						}
-						
-						// Find More button that's not in the container
-						const moreButtonOutside = Array.from(group.querySelectorAll('button')).find(btn => {
-							if (btn.classList.contains('custom-select-all-btn')) return false;
-							if ((btn as HTMLElement).closest('.custom-buttons-container')) return false;
-							const text = (btn.textContent || '').trim();
-							return /\+?\d*\s*more/i.test(text) || 
-								text.toLowerCase() === 'more' ||
-								text.toLowerCase() === 'less';
-						}) as HTMLElement | undefined;
-						
-						if (moreButtonOutside && moreButtonOutside.isConnected && existingContainer.isConnected) {
-							try {
-								existingContainer.appendChild(moreButtonOutside);
-							} catch (e) {
-								// Ignore errors - button might have been removed by React
-							}
-						}
-					}
-					return;
-				}
-
-				// Find the more button in this group (but not if it's already in our container)
-				const allButtons = group.querySelectorAll('button:not(.custom-select-all-btn)');
-				let moreButton: HTMLElement | null = null;
-				
-				for (const button of Array.from(allButtons)) {
-					// Skip if this button is already in our container
-					if ((button as HTMLElement).closest('.custom-buttons-container')) {
-						continue;
-					}
-					
-					const buttonText = (button.textContent || '').trim();
-					// Check if this is a "more" button
-					if (/\+?\d*\s*more/i.test(buttonText) || 
-						buttonText.toLowerCase() === 'more' ||
-						buttonText.toLowerCase() === 'less') {
-						moreButton = button as HTMLElement;
-						break;
-					}
-				}
-
-				// Find the container - use bucket items' parent (more reliable)
-				const container = (bucketItems[0] as HTMLElement).parentElement;
+				const container = firstBucket.parentElement as HTMLElement | null;
 				if (!container) return;
 
-				// Check if we already have a buttons container
-				let buttonsContainer = container.querySelector('.custom-buttons-container') as HTMLElement;
-				
-				if (!buttonsContainer) {
-					// Create a container for both buttons
-					buttonsContainer = document.createElement('div');
-					buttonsContainer.className = 'custom-buttons-container';
-					// Always append at the end
-					container.appendChild(buttonsContainer);
-				} else {
-					// If container exists but isn't at the end, move it to the end
-					if (container.lastElementChild !== buttonsContainer) {
-						try {
-							container.appendChild(buttonsContainer);
-						} catch (e) {
-							// Ignore errors - might be in the middle of React updates
-						}
-					}
+				// Apply flex layout to container to enable ordering
+				if (container.style.display !== 'flex') {
+					container.style.display = 'flex';
+					container.style.flexDirection = 'column';
 				}
 
-				// Create the Select All button if it doesn't exist - only create once
-				if (!buttonsContainer.querySelector('.custom-select-all-btn')) {
+				let buttonsContainer = container.querySelector('.custom-buttons-container') as HTMLElement;
+
+				if (!buttonsContainer) {
+					// Create wrapper for our button
+					buttonsContainer = document.createElement('div');
+					buttonsContainer.className = 'custom-buttons-container';
+
 					const selectAllBtn = document.createElement('button');
 					selectAllBtn.className = 'custom-select-all-btn';
 					selectAllBtn.innerText = 'Select All';
 
-					selectAllBtn.onclick = (e) => {
+					selectAllBtn.addEventListener('click', e => {
 						e.preventDefault();
 						e.stopPropagation();
-						
-						// Find all checkboxes in this aggregation group
-						const allCheckboxes = group.querySelectorAll('input[type="checkbox"]');
-						const checkedCheckboxes = group.querySelectorAll('input[type="checkbox"]:checked');
-						
-						// If all are checked, deselect all; otherwise, select all unchecked
-						if (checkedCheckboxes.length === allCheckboxes.length && allCheckboxes.length > 0) {
-							// All are selected, so deselect all
-							allCheckboxes.forEach((cb) => (cb as HTMLElement).click());
-						} else {
-							// Not all are selected, so select all unchecked
-							const uncheckedCheckboxes = group.querySelectorAll('input[type="checkbox"]:not(:checked)');
-							uncheckedCheckboxes.forEach((cb) => (cb as HTMLElement).click());
-						}
-					};
 
-					// Insert Select All button into the container
-					buttonsContainer.insertBefore(selectAllBtn, buttonsContainer.firstChild);
+						const allCheckboxes = group.querySelectorAll<HTMLInputElement>(
+							'input[type="checkbox"]'
+						);
+						const checked = group.querySelectorAll<HTMLInputElement>(
+							'input[type="checkbox"]:checked'
+						);
+
+						// If everything is checked, uncheck all; otherwise check all
+						const targets =
+							checked.length === allCheckboxes.length && allCheckboxes.length > 0
+								? allCheckboxes
+								: group.querySelectorAll<HTMLInputElement>(
+									'input[type="checkbox"]:not(:checked)'
+								);
+
+						targets.forEach(cb => (cb as unknown as HTMLElement).click());
+					});
+
+					buttonsContainer.appendChild(selectAllBtn);
 				}
 
-				// Move the more button into the container if it exists and isn't already there
-				if (moreButton && 
-					!moreButton.closest('.custom-buttons-container') &&
-					moreButton.isConnected &&
-					buttonsContainer.isConnected) {
-					try {
-						buttonsContainer.appendChild(moreButton);
-					} catch (e) {
-						// If moving fails (e.g., node already removed by React), ignore it silently
-					}
+				// Ensure button has high order
+				buttonsContainer.style.order = '100';
+
+				// Find the More/Less button in this container
+				const moreButton = Array.from(
+					container.querySelectorAll<HTMLButtonElement>('button')
+				).find(btn => isMoreButton(btn));
+
+				if (moreButton) {
+					// Ensure More button has higher order
+					moreButton.style.order = '101';
+				}
+
+				// Only append if not already in container
+				if (buttonsContainer.parentElement !== container) {
+					container.appendChild(buttonsContainer);
 				}
 			});
 		};
 
-		// Run immediately with a small delay to ensure DOM is ready
-		const timeoutId = setTimeout(addSelectAllButtons, 100);
-
-		// Set up observer to watch for DOM changes with debouncing
-		const observer = new MutationObserver((mutations) => {
-			// Only process if there are actual relevant changes
-			const hasRelevantChanges = mutations.some(mutation => {
-				// Check if buckets or buttons were added/removed
-				return Array.from(mutation.addedNodes).some(node => 
-					node.nodeType === 1 && (
-						(node as Element).querySelector?.('.bucket-item') ||
-						(node as Element).querySelector?.('button[class*="MoreOrLessButton"]') ||
-						(node as Element).classList?.contains('bucket-item')
-					)
-				) || Array.from(mutation.removedNodes).some(node =>
-					node.nodeType === 1 && (
-						(node as Element).querySelector?.('.bucket-item') ||
-						(node as Element).querySelector?.('button[class*="MoreOrLessButton"]')
-					)
-				);
+		// Throttle using requestAnimationFrame instead of manual debouncing
+		let scheduled = false;
+		const handleMutations = () => {
+			if (scheduled) return;
+			scheduled = true;
+			requestAnimationFrame(() => {
+				scheduled = false;
+				addSelectAllButtons();
 			});
+		};
 
-			if (hasRelevantChanges) {
-				// Debounce to prevent rapid firing during re-renders
-				debounce(addSelectAllButtons, 200);
-			}
-		});
+		// Initial run (in case everything is already rendered)
+		addSelectAllButtons();
 
-		observer.observe(document.body, { 
-			childList: true, 
-			subtree: true
-		});
+		const observer = new MutationObserver(handleMutations);
+		observer.observe(root, { childList: true, subtree: true });
 
 		return () => {
-			clearTimeout(timeoutId);
-			if (debounceTimer) clearTimeout(debounceTimer);
 			observer.disconnect();
 		};
 	}, []);
