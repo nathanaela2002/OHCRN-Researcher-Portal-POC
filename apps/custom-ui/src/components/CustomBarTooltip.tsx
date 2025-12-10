@@ -23,11 +23,11 @@ const CustomBarTooltip = (props: CustomBarTooltipProps): ReactElement => {
 			css={css`
 				background: rgba(0, 0, 0, 0.85);
 				color: white;
-				padding: 8px 12px;
-				border-radius: 4px;
-				font-size: 12px;
+				padding: 0.5rem 0.75rem;
+				border-radius: 0.25rem;
+				font-size: 0.75rem;
 				font-family: 'Montserrat', sans-serif;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+				box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
 				pointer-events: none;
 				position: relative;
 				white-space: nowrap;
@@ -37,7 +37,7 @@ const CustomBarTooltip = (props: CustomBarTooltipProps): ReactElement => {
 			<div
 				css={css`
 					font-weight: 600;
-					margin-bottom: 4px;
+					margin-bottom: 0.25rem;
 				`}
 			>
 				{displayLabel}:
@@ -52,14 +52,14 @@ const CustomBarTooltip = (props: CustomBarTooltipProps): ReactElement => {
 			<div
 				css={css`
 					position: absolute;
-					left: -6px;
+					left: -0.375rem;
 					top: 50%;
 					transform: translateY(-50%);
 					width: 0;
 					height: 0;
-					border-top: 6px solid transparent;
-					border-bottom: 6px solid transparent;
-					border-right: 6px solid rgba(0, 0, 0, 0.85);
+					border-top: 0.375rem solid transparent;
+					border-bottom: 0.375rem solid transparent;
+					border-right: 0.375rem solid rgba(0, 0, 0, 0.85);
 				`}
 			/>
 		</div>

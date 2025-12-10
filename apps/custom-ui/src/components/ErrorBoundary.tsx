@@ -31,9 +31,9 @@ class ErrorBoundary extends Component<Props, State> {
 				this.props.fallback || (
 					<div
 						css={{
-							padding: '20px',
-							border: '1px solid #ff6b6b',
-							borderRadius: '8px',
+							padding: '1.25rem',
+							border: '0.0625rem solid #ff6b6b',
+							borderRadius: '0.5rem',
 							backgroundColor: '#ffe0e0',
 							color: '#c92a2a',
 						}}

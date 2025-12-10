@@ -21,19 +21,19 @@ const FamilyHistoryChart = (): ReactElement => {
     return (
         <div
             css={css`
-				padding: 12px;
+				padding: 0.75rem;
 				background-color: ${theme.colors.white};
-				border-radius: 8px;
-				border: 1px solid #BABCC2;
-				margin: 15px 0;
+				border-radius: 0.5rem;
+				border: 0.0625rem solid #BABCC2;
+				margin: 0.9375rem 0;
 			`}
         >
             <h3
                 css={css`
-					margin: 0 0 10px 0;
+					margin: 0 0 0.625rem 0;
 					color: ${theme.colors.black};
 					font-family: 'Montserrat', sans-serif;
-					font-size: 14px;
+					font-size: 0.875rem;
 					font-weight: 600;
 				`}
             >

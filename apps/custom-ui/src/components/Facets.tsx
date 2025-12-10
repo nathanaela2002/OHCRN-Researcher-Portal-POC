@@ -97,27 +97,27 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
                             }
 						}
 						.title {
-							font-size: 14px;
+							font-size: 0.875rem;
 							font-weight: 600;
-							line-height: 20px;
+							line-height: 1.25rem;
 						}
 						.toggle-button {
-							font-size: 12px;
-							padding: 2px 5px 8px 5px;
-							margin-left: 5px;
+							font-size: 0.75rem;
+							padding: 0.125rem 0.3125rem 0.5rem 0.3125rem;
+							margin-left: 0.3125rem;
 							.toggle-button-option {
-								border: 1px solid #ddd;
+								border: 0.0625rem solid #ddd;
 								&:nth-of-type(2) {
-									border-left: 0px;
-									border-right: 0px;
+									border-left: 0;
+									border-right: 0;
 								}
 							}
 							.toggle-button-option .bucket-count {
-								font-size: 11px;
+								font-size: 0.6875rem;
 								display: inline-block;
 								background-color: #e0e0e0;
-								padding: 0 3px;
-								border-radius: 3px;
+								padding: 0 0.1875rem;
+								border-radius: 0.1875rem;
 							}
 							.toggle-button-option.active {
 								background-color: #e3f2fd;
@@ -136,8 +136,8 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 						-webkit-appearance: none;
 						width: 1rem;
 						height: 1rem;
-						border: 1px solid #BABCC2;
-						border-radius: 3px;
+						border: 0.0625rem solid #BABCC2;
+						border-radius: 0.1875rem;
 						display: inline-flex;
 						justify-content: center;
 						align-items: center;
@@ -147,7 +147,7 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 
 						input[type='checkbox']:checked {
 						background-color: #64BC46;
-						border: 1px solid #64BC46;
+						border: 0.0625rem solid #64BC46;
 						}
 
 						input[type='checkbox']:checked::after {
@@ -159,8 +159,8 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 						}
 						.bucket-item {
 						position: relative;
-						margin: 2px 0;
-						padding: 2px 8px;
+						margin: 0.125rem 0;
+						padding: 0.125rem 0.5rem;
 						}
 
 						.bucket-item:has(input[type='checkbox']:checked) {
@@ -168,14 +168,13 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 								content: "";
 								position: absolute;
 
-								top: -1px;
-								bottom: -1px;
+								top: -0.2rem;
+								bottom: -0.2rem;
 
-								left: 0px;
-								right: 0px;
+								left: 0;
+								right: 0;
 
 								background-color: #EFF8EC;
-								border-radius: 4px;
 
 								z-index: 0;
 							}
@@ -200,9 +199,9 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 							background: none !important;
 							border: none !important;
 							cursor: pointer;
-							font-size: 11px !important;
+							font-size: 0.6875rem !important;
 							margin: 0 !important;
-							padding: 0 16px !important;
+							padding: 0 1rem !important;
 							display: inline-block !important;
 							font-weight: 300 !important;
 							text-align: left !important;
@@ -218,7 +217,7 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 							display: flex !important;
 							align-items: center !important;
 							justify-content: space-between !important;
-							margin-top: 4px !important;
+							margin-top: 0.25rem !important;
 							width: 100% !important;
 							flex-wrap: nowrap !important;
 							position: relative !important;
@@ -228,7 +227,7 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 						.custom-buttons-container button.showMore-wrapper,
 						.custom-buttons-container button[class*="MoreOrLessButton"],
 						.custom-buttons-container button:not(.custom-select-all-btn) {
-							margin-right: 8px !important;
+							margin-right: 0.5rem !important;
 							margin-left: auto !important;
 							flex-shrink: 0 !important;
 						}
@@ -247,32 +246,32 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 				},
 				FilterInput: {
 					css: css`
-						border-radius: 5px;
-						border: 1px solid ${theme.colors.primary};
-						margin: 6px 5px 7px 0;
+						border-radius: 0.3125rem;
+						border: 0.0625rem solid ${theme.colors.primary};
+						margin: 0.375rem 0.3125rem 0.4375rem 0;
 						&.focused {
-							box-shadow: inset 0 0 2px 1px ${theme.colors.primary};
+							box-shadow: inset 0 0 0.125rem 0.0625rem ${theme.colors.primary};
 						}
 						& input {
-							font-size: 12px;
+							font-size: 0.75rem;
 							&::placeholder {
 								color: ${theme.colors.black};
 							}
 						}
 						input[type='text' i] {
-							margin-left: 5px;
-							margin-top: 2px;
+							margin-left: 0.3125rem;
+							margin-top: 0.125rem;
 						}
 					`,
 				},
 				MoreOrLessButton: {
 					css: css`
-						font-size: 11px;
+						font-size: 0.6875rem;
 						margin-top: -0.95rem;
 						margin-right: 0.5rem;
 						&::before {
-							padding-top: 3px;
-							margin-right: 3px;
+							padding-top: 0.1875rem;
+							margin-right: 0.1875rem;
 						}
 						&.more::before {
 							content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3E%3Cpath fill='${primaryDarkEncoded}' fill-rule='evenodd' d='M7.637 6.029H6.034v1.613c0 .291-.24.53-.534.53-.294 0-.534-.239-.534-.53V6.03H3.363c-.294 0-.534-.238-.534-.529 0-.29.24-.529.534-.529h1.603V3.358c0-.291.24-.53.534-.53.294 0 .534.239.534.53V4.97h1.603c.294 0 .534.238.534.529 0 .29-.24.529-.534.529M5.5 0C2.462 0 0 2.462 0 5.5S2.462 11 5.5 11 11 8.538 11 5.5 8.538 0 5.5 0'/%3E%3C/svg%3E%0A");
@@ -293,7 +292,7 @@ const getAggregationsStyles = (theme: CustomUIThemeInterface): UseThemeContextPr
 						borderRadius: '0.2rem',
 						fontWeight: 'bold !important',
 						css: css`
-						font-size: 11px;
+						font-size: 0.6875rem;
 						background-color: #e0e0e0;
 						&:last-of-type,
 						&:nth-of-type(4) {
@@ -477,7 +476,7 @@ const Facets = (): ReactElement => {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
-					padding: 6px 8px 2px 8px;
+					padding: 0.375rem 0.5rem 0.125rem 0.5rem;
 					border-bottom: none;
 					background-color: ${theme.colors.white};
 					position: sticky;
@@ -487,7 +486,7 @@ const Facets = (): ReactElement => {
 			>
 				<h2
 					css={css`
-						font-size: 16px;
+						font-size: 1rem;
 						font-weight: 600;
 						margin: 0;
 					`}
@@ -501,7 +500,7 @@ const Facets = (): ReactElement => {
                         border: none;
                         color: #282A35;
                         font-family: 'Montserrat', sans-serif;
-                        font-size: 12px;
+                        font-size: 0.75rem;
                         font-weight: 600;
                         cursor: pointer;
                         display: flex;
@@ -525,7 +524,7 @@ const Facets = (): ReactElement => {
 						strokeLinecap="round"
 						strokeLinejoin="round"
 						css={css`
-                            margin-left: 4px;
+                            margin-left: 0.25rem;
                             transition: transform 0.2s;
                             transform: ${isAllExpanded ? 'rotate(180deg)' : 'rotate(0deg)'};
                         `}

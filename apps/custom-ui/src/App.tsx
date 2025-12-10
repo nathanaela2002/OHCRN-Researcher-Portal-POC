@@ -106,18 +106,18 @@ const App = (): ReactElement => {
 						flex-direction: column;
 						justify-content: center;
 						align-items: center;
-						min-height: calc(100vh - 120px);
+						min-height: calc(100vh - 7.5rem);
 						padding: 2rem;
 						width: 100%;
 					`}
-					>
-						<div
-							css={css`
+				>
+					<div
+						css={css`
 							max-width: 800px;
 							width: 100%;
-							padding: 20px;
-							border: 1px solid #ccc;
-							border-radius: 4px;
+							padding: 1.25rem;
+							border: 0.0625rem solid #ccc;
+							border-radius: 0.25rem;
 							background-color: #fff3cd;
 						`}
 						>

@@ -42,18 +42,18 @@ const GenderChart = (): ReactElement => {
     return (
         <div
             css={css`
-				padding: 15px;
+				padding: 0.9375rem;
 				background-color: ${theme.colors.white};
-				border-radius: 8px;
-				border: 1px solid #BABCC2;
-				margin: 15px 0;
+				border-radius: 0.5rem;
+				border: 0.0625rem solid #BABCC2;
+				margin: 0.9375rem 0;
 			`}
         >
             <h3
                 css={css`
-					margin: 0 0 10px 0;
+					margin: 0 0 0.625rem 0;
 					color: ${theme.colors.black};
-					font-size: 15px;
+					font-size: 0.9375rem;
 					font-weight: 600;
 					font-family: 'Montserrat', sans-serif;
 				`}

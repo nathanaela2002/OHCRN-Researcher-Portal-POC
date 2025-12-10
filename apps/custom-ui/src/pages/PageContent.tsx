@@ -61,7 +61,7 @@ const PageContent = () => {
 							max-height: 100vh !important;
 							overflow-y: auto !important;
 							overflow-x: hidden;
-							border-right: 1px solid #ccc;
+							border-right: 0.0625rem solid #ccc;
 							display: flex;
 							flex-direction: column;
 						`}
@@ -81,7 +81,7 @@ const PageContent = () => {
 						<div
 							css={css`
 								flex: 8.5;
-								margin: 0 15px 0 15px;
+								margin: 0 0.9375rem 0 0.9375rem;
 								max-width: calc(100vw - ${sidebarWidth + 10}px);
 							`}
 						>

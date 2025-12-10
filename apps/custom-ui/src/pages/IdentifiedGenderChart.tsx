@@ -21,19 +21,19 @@ const IdentifiedGenderChart = (): ReactElement => {
     return (
         <div
             css={css`
-				padding: 20px;
+				padding: 1.25rem;
 				background-color: ${theme.colors.white};
-				border-radius: 8px;
-				border: 1px solid #BABCC2;
-				margin: 15px 0;
+				border-radius: 0.5rem;
+				border: 0.0625rem solid #BABCC2;
+				margin: 0.9375rem 0;
 			`}
         >
             <h3
                 css={css`
-					margin: 0 0 20px 0;
+					margin: 0 0 1.25rem 0;
 					color: ${theme.colors.black};
 					font-family: 'Montserrat', sans-serif;
-					font-size: 18px;
+					font-size: 1.125rem;
 					font-weight: 600;
 				`}
             >

@@ -40,20 +40,20 @@ const ChartsLayout = (): ReactElement => {
 	return (
 		<div
 			css={css`
-				margin: 15px 0;
+				margin: 0.9375rem 0;
 				background-color: ${theme.colors.white};
-				border-radius: 8px;
-				border: 1px solid #BABCC2;
-				padding: 15px;
+				border-radius: 0.5rem;
+				border: 0.0625rem solid #BABCC2;
+				padding: 0.9375rem;
 			`}
 		>
 			<div
 				css={css`
 					display: grid;
 					grid-template-columns: repeat(4, 1fr);
-					gap: 15px;
-					margin-bottom: -10px;
-					margin-top: -10px;
+					gap: 0.9375rem;
+					margin-bottom: -0.625rem;
+					margin-top: -0.625rem;
 					@media (max-width: 1400px) {
 						grid-template-columns: repeat(2, 1fr);
 					}
@@ -80,8 +80,8 @@ const ChartsLayout = (): ReactElement => {
 				css={css`
 					display: grid;
 					grid-template-columns: 2fr 1fr 1fr;
-					gap: 20px;
-					margin-bottom: -10px;
+					gap: 1.25rem;
+					margin-bottom: -0.625rem;
 					@media (max-width: 1200px) {
 						grid-template-columns: repeat(2, 1fr);
 					}
@@ -105,11 +105,11 @@ const ChartsLayout = (): ReactElement => {
 				css={css`
 					display: grid;
 					grid-template-columns: repeat(2, 1fr);
-					gap: 20px;
+					gap: 1.25rem;
 					@media (max-width: 1200px) {
 						grid-template-columns: 1fr;
 					}
-					margin-bottom: -10px;
+					margin-bottom: -0.625rem;
 				`}
 			>
 				<div>

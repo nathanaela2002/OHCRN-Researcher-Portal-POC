@@ -35,7 +35,7 @@ aside[class*="css-"] {
 
 /* Custom tooltip positioning for Nivo charts - position to the right and keep fixed */
 div[class*="nivo-tooltip"] {
-  transform: translate(10px, -50%) !important;
+  transform: translate(0.625rem, -50%) !important;
   left: 100% !important;
   right: auto !important;
 }

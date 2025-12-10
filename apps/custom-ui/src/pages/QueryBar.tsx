@@ -34,23 +34,23 @@ const getThemeCustomisations = (theme: CustomUIThemeInterface): UseThemeContextP
 				arrowColor: '#36581C',
 			},
 			SQONBubble: {
-				borderRadius: '8px',
-				fontSize: '13px',
+				borderRadius: '0.5rem',
+				fontSize: '0.8125rem',
 				fontWeight: 300,
 				height: '1.6rem',
-				letterSpacing: '0.2px',
+				letterSpacing: '0.0125rem',
 			},
 			SQONClear: {
 				label: 'Clear',
 				borderColor: theme.colors.grey_3,
-				borderRadius: '5px',
+				borderRadius: '0.3125rem',
 				background: '#FFFFFF',
 				cursor: 'pointer',
 				fontColor: theme.colors.black,
 				fontSize: '0.88rem',
 				fontWeight: 600,
 				hoverBackground: '#FFFFFF',
-				padding: '0 12px',
+				padding: '0 0.75rem',
 			},
 			SQONFieldName: {
 				fontWeight: 'bold',
@@ -63,7 +63,7 @@ const getThemeCustomisations = (theme: CustomUIThemeInterface): UseThemeContextP
 			SQONLessOrMore: {
 				background: '#36581C',
 				css: css`
-					font-size: 11px;
+					font-size: 0.6875rem;
 				`,
 				fontColor: theme.colors.white,
 				hoverBackground: '#36581C',
@@ -76,7 +76,7 @@ const getThemeCustomisations = (theme: CustomUIThemeInterface): UseThemeContextP
 				background: '#36581C',
 				css: css`
 					margin-left: 0;
-					font-size: 11px;
+					font-size: 0.6875rem;
 					font-weight: bold;
 					&::after {
 						content: url(data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%228%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%228%22%20y2%3D%228%22%20/%3E%0A%20%20%3Cline%20x1%3D%228%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%228%22%20/%3E%0A%3C/svg%3E);
@@ -109,11 +109,11 @@ const QueryBar = (): ReactElement => {
 		<div
 			css={css`
 				min-height: 48px;
-				margin: 10px 0;
+				margin: 0.625rem 0;
 				background-color: ${theme.colors.white};
-				border-radius: 5px;
-				border: 1px solid #BABCC2;
-				padding: 10px;
+				border-radius: 0.3125rem;
+				border: 0.0625rem solid #BABCC2;
+				padding: 0.625rem;
 			`}
 		>
 			<SQONViewer emptyMessage="Explore data by selecting filters." />

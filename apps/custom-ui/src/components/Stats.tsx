@@ -98,15 +98,15 @@ const Stats = (): ReactElement => {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
-				margin: 15px 0;
-				padding: 20px;
+				margin: 0.9375rem 0;
+				padding: 1.25rem;
 				background-color: ${theme.colors.white};
-				border-radius: 8px;
-				border: 1px solid #BABCC2;
+				border-radius: 0.5rem;
+				border: 0.0625rem solid #BABCC2;
 				align-items: center;
 				@media (max-width: 768px) {
 					flex-direction: column;
-					gap: 20px;
+					gap: 1.25rem;
 					align-items: flex-start;
 				}
 			`}
@@ -116,7 +116,7 @@ const Stats = (): ReactElement => {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
-					gap: 8px;
+					gap: 0.5rem;
 					flex: 0 0 auto;
                     margin-left: 7rem;
 				`}
@@ -127,12 +127,12 @@ const Stats = (): ReactElement => {
 						display: flex;
 						flex-direction: row;
 						align-items: baseline;
-						gap: 8px;
+						gap: 0.5rem;
 					`}
 				>
 					<span
 						css={css`
-							font-size: 16px;
+							font-size: 1rem;
 							font-weight: 400;
 							color: ${theme.colors.black};
 						`}
@@ -141,7 +141,7 @@ const Stats = (): ReactElement => {
 					</span>
 					<span
 						css={css`
-							font-size: 16px;
+							font-size: 1rem;
 							font-weight: 400;
 							color: ${theme.colors.black};
 						`}
@@ -155,7 +155,7 @@ const Stats = (): ReactElement => {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
-					gap: 8px;
+					gap: 0.5rem;
 					flex: 1 1 auto;
 					justify-content: center;
 				`}
@@ -166,12 +166,12 @@ const Stats = (): ReactElement => {
 						display: flex;
 						flex-direction: row;
 						align-items: baseline;
-						gap: 8px;
+						gap: 0.5rem;
 					`}
 				>
 					<span
 						css={css`
-							font-size: 16px;
+							font-size: 1rem;
 							font-weight: 400;
 							color: ${theme.colors.black};
 						`}
@@ -180,7 +180,7 @@ const Stats = (): ReactElement => {
 					</span>
 					<span
 						css={css`
-							font-size: 16px;
+							font-size: 1rem;
 							font-weight: 400;
 							color: ${theme.colors.black};
 						`}
@@ -194,7 +194,7 @@ const Stats = (): ReactElement => {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
-					gap: 8px;
+					gap: 0.5rem;
 					flex: 0 0 auto;
 					margin-right: 7rem;
 				`}
@@ -205,12 +205,12 @@ const Stats = (): ReactElement => {
 						display: flex;
 						flex-direction: row;
 						align-items: baseline;
-						gap: 8px;
+						gap: 0.5rem;
 					`}
 				>
 					<span
 						css={css`
-							font-size: 16px;
+							font-size: 1rem;
 							font-weight: 400;
 							color: ${theme.colors.black};
 						`}
@@ -219,7 +219,7 @@ const Stats = (): ReactElement => {
 					</span>
 					<span
 						css={css`
-							font-size: 16px;
+							font-size: 1rem;
 							font-weight: 400;
 							color: ${theme.colors.black};
 						`}
