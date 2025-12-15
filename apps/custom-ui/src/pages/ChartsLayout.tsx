@@ -94,7 +94,7 @@ const ChartsLayout = (): ReactElement => {
 					<GeneticsClinicVisitedChart />
 				</div>
 				<div>
-					<CancerDiagnosisChart />
+					<HistoryOfCancerChart />
 				</div>
 				<div>
 					<MolecularLabVisitedChart />
@@ -113,7 +113,7 @@ const ChartsLayout = (): ReactElement => {
 				`}
 			>
 				<div>
-					<HistoryOfCancerChart />
+					<CancerDiagnosisChart />
 				</div>
 				<div>
 					<VitalStatusChart />

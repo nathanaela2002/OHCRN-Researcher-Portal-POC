@@ -7,8 +7,6 @@ import type {
   ArrangerTableConfig,
   FacetAggregation,
   ArrangerFacetsConfig,
-  ArrangerChartsConfig,
-  BarAggregation,
 } from "../types";
 import type { ElasticsearchMapping, ElasticsearchField } from "../types";
 
@@ -191,7 +189,6 @@ function processFields(
     const extendedField: ExtendedField = {
       displayName: formatDisplayName(formattedFieldName),
       fieldName: formattedFieldName,
-      aggsType: "Aggregations",
     };
 
     // Add isArray property for nested type fields
@@ -327,7 +324,6 @@ export function ArrangerConfigs(
   extended: ArrangerExtendedConfig;
   table: ArrangerTableConfig;
   facets: ArrangerFacetsConfig;
-  charts: ArrangerChartsConfig;
 } {
   Logger.info`Generating Arranger configs for index: ${indexName}`;
   Logger.info`Document type: ${documentType}`;
@@ -415,20 +411,6 @@ export function ArrangerConfigs(
       facets: {
         facets: {
           aggregations: facetAggregations,
-        },
-      },
-      charts: {
-        charts: {
-          aggregations: facetAggregations
-            .filter((agg) => agg.fieldName === "data__Region")
-            .map(
-              (agg) =>
-              ({
-                active: agg.active,
-                fieldName: agg.fieldName,
-                show: agg.show,
-              } as BarAggregation)
-            ),
         },
       },
     };

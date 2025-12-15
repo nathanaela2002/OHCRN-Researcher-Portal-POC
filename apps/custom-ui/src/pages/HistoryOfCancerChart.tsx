@@ -40,7 +40,7 @@ const HistoryOfCancerChart = (): ReactElement => {
                 History of Cancer
             </h3>
 
-            <div style={{ height: '360px' }}>
+            <div style={{ height: '180px' }}>
                 <ErrorBoundary>
                     <ChartsProvider debugMode={false} loadingDelay={0}>
                         <ChartsThemeProvider colors={shuffledPalette}>

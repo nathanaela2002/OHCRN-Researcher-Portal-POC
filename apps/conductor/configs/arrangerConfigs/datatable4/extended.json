@@ -2,118 +2,95 @@
   "extended": [
     {
       "displayName": "ParticipantId",
-      "fieldName": "data.participantId",
-      "aggsType": "Aggregations"
+      "fieldName": "data.participantId"
     },
     {
       "displayName": "BirthSex",
-      "fieldName": "data.birthSex",
-      "aggsType": "Aggregations"
+      "fieldName": "data.birthSex"
     },
     {
       "displayName": "Gender",
-      "fieldName": "data.gender",
-      "aggsType": "Aggregations"
+      "fieldName": "data.gender"
     },
     {
       "displayName": "SelfIdentifiedGender",
-      "fieldName": "data.selfIdentifiedGender",
-      "aggsType": "Aggregations"
+      "fieldName": "data.selfIdentifiedGender"
     },
     {
       "displayName": "TransgenderIdentity",
-      "fieldName": "data.transgenderIdentity",
-      "aggsType": "Aggregations"
+      "fieldName": "data.transgenderIdentity"
     },
     {
       "displayName": "Ancestry",
-      "fieldName": "data.ancestry",
-      "aggsType": "Aggregations"
+      "fieldName": "data.ancestry"
     },
     {
       "displayName": "SelfReportedGeneticsClinicVisited",
-      "fieldName": "data.selfReportedGeneticsClinicVisited",
-      "aggsType": "Aggregations"
+      "fieldName": "data.selfReportedGeneticsClinicVisited"
     },
     {
       "displayName": "SelfReportedMolecularLabVisited",
-      "fieldName": "data.selfReportedMolecularLabVisited",
-      "aggsType": "Aggregations"
+      "fieldName": "data.selfReportedMolecularLabVisited"
     },
     {
       "displayName": "HistoryOfCancer",
-      "fieldName": "data.historyOfCancer",
-      "aggsType": "Aggregations"
+      "fieldName": "data.historyOfCancer"
     },
     {
       "displayName": "SelfReportedPrimaryCancerDiagnosis",
-      "fieldName": "data.selfReportedPrimaryCancerDiagnosis",
-      "aggsType": "Aggregations"
+      "fieldName": "data.selfReportedPrimaryCancerDiagnosis"
     },
     {
       "displayName": "FamilyHistoryOfCancer",
-      "fieldName": "data.familyHistoryOfCancer",
-      "aggsType": "Aggregations"
+      "fieldName": "data.familyHistoryOfCancer"
     },
     {
       "displayName": "VitalStatus",
-      "fieldName": "data.vitalStatus",
-      "aggsType": "Aggregations"
+      "fieldName": "data.vitalStatus"
     },
     {
       "displayName": "SelfReportedClinicianFirstName",
-      "fieldName": "data.selfReportedClinicianFirstName",
-      "aggsType": "Aggregations"
+      "fieldName": "data.selfReportedClinicianFirstName"
     },
     {
       "displayName": "SelfReportedClinicianLastName",
-      "fieldName": "data.selfReportedClinicianLastName",
-      "aggsType": "Aggregations"
+      "fieldName": "data.selfReportedClinicianLastName"
     },
     {
       "displayName": "SelfReportedClinicianTitleOrRole",
-      "fieldName": "data.selfReportedClinicianTitleOrRole",
-      "aggsType": "Aggregations"
+      "fieldName": "data.selfReportedClinicianTitleOrRole"
     },
     {
       "displayName": "Submission Metadata",
-      "fieldName": "data.submission_metadata",
-      "aggsType": "Aggregations"
+      "fieldName": "data.submission_metadata"
     },
     {
       "displayName": "Submission Metadata Submitter Id",
-      "fieldName": "data.submission_metadata.submitter_id",
-      "aggsType": "Aggregations"
+      "fieldName": "data.submission_metadata.submitter_id"
     },
     {
       "displayName": "Submission Metadata Processing Started",
-      "fieldName": "data.submission_metadata.processing_started",
-      "aggsType": "Aggregations"
+      "fieldName": "data.submission_metadata.processing_started"
     },
     {
       "displayName": "Submission Metadata Processed At",
-      "fieldName": "data.submission_metadata.processed_at",
-      "aggsType": "Aggregations"
+      "fieldName": "data.submission_metadata.processed_at"
     },
     {
       "displayName": "Submission Metadata Source File",
-      "fieldName": "data.submission_metadata.source_file",
-      "aggsType": "Aggregations"
+      "fieldName": "data.submission_metadata.source_file"
     },
     {
       "displayName": "Submission Metadata Record Number",
-      "fieldName": "data.submission_metadata.record_number",
-      "aggsType": "Aggregations"
+      "fieldName": "data.submission_metadata.record_number"
     },
     {
       "displayName": "Submission Metadata Hostname",
-      "fieldName": "data.submission_metadata.hostname",
-      "aggsType": "Aggregations"
+      "fieldName": "data.submission_metadata.hostname"
     },
     {
       "displayName": "Submission Metadata Username",
-      "fieldName": "data.submission_metadata.username",
-      "aggsType": "Aggregations"
+      "fieldName": "data.submission_metadata.username"
     }
   ]
 }
