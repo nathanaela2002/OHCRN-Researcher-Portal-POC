@@ -10,116 +10,51 @@
       "data": {
         "type": "object",
         "properties": {
-          "CountyId": {
-            "type": "integer"
-          },
-          "State": {
+          "participantId": {
             "type": "keyword"
           },
-          "County": {
+          "birthSex": {
             "type": "keyword"
           },
-          "TotalPop": {
-            "type": "integer"
+          "gender": {
+            "type": "keyword"
           },
-          "Men": {
-            "type": "integer"
+          "selfIdentifiedGender": {
+            "type": "keyword",
+            "null_value": "No Data"
           },
-          "Women": {
-            "type": "integer"
+          "transgenderIdentity": {
+            "type": "keyword"
           },
-          "Hispanic": {
-            "type": "float"
+          "ancestry": {
+            "type": "keyword"
           },
-          "White": {
-            "type": "float"
+          "selfReportedGeneticsClinicVisited": {
+            "type": "keyword"
           },
-          "Black": {
-            "type": "float"
+          "selfReportedMolecularLabVisited": {
+            "type": "keyword"
           },
-          "Native": {
-            "type": "float"
+          "historyOfCancer": {
+            "type": "keyword"
           },
-          "Asian": {
-            "type": "float"
+          "selfReportedPrimaryCancerDiagnosis": {
+            "type": "keyword"
           },
-          "Pacific": {
-            "type": "integer"
+          "familyHistoryOfCancer": {
+            "type": "keyword"
           },
-          "VotingAgeCitizen": {
-            "type": "integer"
+          "vitalStatus": {
+            "type": "keyword"
           },
-          "Income": {
-            "type": "integer"
+          "selfReportedClinicianFirstName": {
+            "type": "keyword"
           },
-          "IncomeErr": {
-            "type": "integer"
+          "selfReportedClinicianLastName": {
+            "type": "keyword"
           },
-          "IncomePerCap": {
-            "type": "integer"
-          },
-          "IncomePerCapErr": {
-            "type": "integer"
-          },
-          "Poverty": {
-            "type": "float"
-          },
-          "ChildPoverty": {
-            "type": "float"
-          },
-          "Professional": {
-            "type": "float"
-          },
-          "Service": {
-            "type": "integer"
-          },
-          "Office": {
-            "type": "float"
-          },
-          "Construction": {
-            "type": "float"
-          },
-          "Production": {
-            "type": "float"
-          },
-          "Drive": {
-            "type": "integer"
-          },
-          "Carpool": {
-            "type": "float"
-          },
-          "Transit": {
-            "type": "float"
-          },
-          "Walk": {
-            "type": "float"
-          },
-          "OtherTransp": {
-            "type": "float"
-          },
-          "WorkAtHome": {
-            "type": "float"
-          },
-          "MeanCommute": {
-            "type": "float"
-          },
-          "Employed": {
-            "type": "integer"
-          },
-          "PrivateWork": {
-            "type": "float"
-          },
-          "PublicWork": {
-            "type": "float"
-          },
-          "SelfEmployed": {
-            "type": "float"
-          },
-          "FamilyWork": {
-            "type": "float"
-          },
-          "Unemployment": {
-            "type": "float"
+          "selfReportedClinicianTitleOrRole": {
+            "type": "keyword"
           },
           "submission_metadata": {
             "type": "object",

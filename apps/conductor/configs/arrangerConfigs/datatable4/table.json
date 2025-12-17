@@ -3,299 +3,123 @@
     "columns": [
       {
         "canChangeShow": true,
-        "fieldName": "data.CountyId",
+        "fieldName": "data.participantId",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.CountyId",
-        "query": "data { CountyId }"
+        "jsonPath": "$.data.participantId",
+        "query": "data { participantId }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.State",
+        "fieldName": "data.birthSex",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.State",
-        "query": "data { State }"
+        "jsonPath": "$.data.birthSex",
+        "query": "data { birthSex }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.County",
+        "fieldName": "data.gender",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.County",
-        "query": "data { County }"
+        "jsonPath": "$.data.gender",
+        "query": "data { gender }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.TotalPop",
+        "fieldName": "data.selfIdentifiedGender",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.TotalPop",
-        "query": "data { TotalPop }"
+        "jsonPath": "$.data.selfIdentifiedGender",
+        "query": "data { selfIdentifiedGender }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.Men",
+        "fieldName": "data.transgenderIdentity",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.Men",
-        "query": "data { Men }"
+        "jsonPath": "$.data.transgenderIdentity",
+        "query": "data { transgenderIdentity }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.Women",
+        "fieldName": "data.ancestry",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.Women",
-        "query": "data { Women }"
+        "jsonPath": "$.data.ancestry",
+        "query": "data { ancestry }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.Hispanic",
+        "fieldName": "data.selfReportedGeneticsClinicVisited",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.Hispanic",
-        "query": "data { Hispanic }"
+        "jsonPath": "$.data.selfReportedGeneticsClinicVisited",
+        "query": "data { selfReportedGeneticsClinicVisited }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.White",
+        "fieldName": "data.selfReportedMolecularLabVisited",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.White",
-        "query": "data { White }"
+        "jsonPath": "$.data.selfReportedMolecularLabVisited",
+        "query": "data { selfReportedMolecularLabVisited }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.Black",
+        "fieldName": "data.historyOfCancer",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.Black",
-        "query": "data { Black }"
+        "jsonPath": "$.data.historyOfCancer",
+        "query": "data { historyOfCancer }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.Native",
+        "fieldName": "data.selfReportedPrimaryCancerDiagnosis",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.Native",
-        "query": "data { Native }"
+        "jsonPath": "$.data.selfReportedPrimaryCancerDiagnosis",
+        "query": "data { selfReportedPrimaryCancerDiagnosis }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.Asian",
+        "fieldName": "data.familyHistoryOfCancer",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.Asian",
-        "query": "data { Asian }"
+        "jsonPath": "$.data.familyHistoryOfCancer",
+        "query": "data { familyHistoryOfCancer }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.Pacific",
+        "fieldName": "data.vitalStatus",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.Pacific",
-        "query": "data { Pacific }"
+        "jsonPath": "$.data.vitalStatus",
+        "query": "data { vitalStatus }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.VotingAgeCitizen",
+        "fieldName": "data.selfReportedClinicianFirstName",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.VotingAgeCitizen",
-        "query": "data { VotingAgeCitizen }"
+        "jsonPath": "$.data.selfReportedClinicianFirstName",
+        "query": "data { selfReportedClinicianFirstName }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.Income",
+        "fieldName": "data.selfReportedClinicianLastName",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.Income",
-        "query": "data { Income }"
+        "jsonPath": "$.data.selfReportedClinicianLastName",
+        "query": "data { selfReportedClinicianLastName }"
       },
       {
         "canChangeShow": true,
-        "fieldName": "data.IncomeErr",
+        "fieldName": "data.selfReportedClinicianTitleOrRole",
         "show": true,
         "sortable": true,
-        "jsonPath": "$.data.IncomeErr",
-        "query": "data { IncomeErr }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.IncomePerCap",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.IncomePerCap",
-        "query": "data { IncomePerCap }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.IncomePerCapErr",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.IncomePerCapErr",
-        "query": "data { IncomePerCapErr }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Poverty",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Poverty",
-        "query": "data { Poverty }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.ChildPoverty",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.ChildPoverty",
-        "query": "data { ChildPoverty }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Professional",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Professional",
-        "query": "data { Professional }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Service",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Service",
-        "query": "data { Service }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Office",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Office",
-        "query": "data { Office }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Construction",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Construction",
-        "query": "data { Construction }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Production",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Production",
-        "query": "data { Production }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Drive",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Drive",
-        "query": "data { Drive }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Carpool",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Carpool",
-        "query": "data { Carpool }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Transit",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Transit",
-        "query": "data { Transit }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Walk",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Walk",
-        "query": "data { Walk }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.OtherTransp",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.OtherTransp",
-        "query": "data { OtherTransp }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.WorkAtHome",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.WorkAtHome",
-        "query": "data { WorkAtHome }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.MeanCommute",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.MeanCommute",
-        "query": "data { MeanCommute }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Employed",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Employed",
-        "query": "data { Employed }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.PrivateWork",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.PrivateWork",
-        "query": "data { PrivateWork }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.PublicWork",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.PublicWork",
-        "query": "data { PublicWork }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.SelfEmployed",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.SelfEmployed",
-        "query": "data { SelfEmployed }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.FamilyWork",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.FamilyWork",
-        "query": "data { FamilyWork }"
-      },
-      {
-        "canChangeShow": true,
-        "fieldName": "data.Unemployment",
-        "show": true,
-        "sortable": true,
-        "jsonPath": "$.data.Unemployment",
-        "query": "data { Unemployment }"
+        "jsonPath": "$.data.selfReportedClinicianTitleOrRole",
+        "query": "data { selfReportedClinicianTitleOrRole }"
       },
       {
         "canChangeShow": true,

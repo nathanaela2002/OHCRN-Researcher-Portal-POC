@@ -29,7 +29,7 @@ export class ArrangerCommand extends Command {
     return (
       cliOutput.outputPath === CONFIG_PATHS.arranger.configs ||
       cliOutput.outputPath ===
-        path.join(CONFIG_PATHS.arranger.dir, "configs") ||
+      path.join(CONFIG_PATHS.arranger.dir, "configs") ||
       super.isUsingDefaultPath(cliOutput)
     );
   }

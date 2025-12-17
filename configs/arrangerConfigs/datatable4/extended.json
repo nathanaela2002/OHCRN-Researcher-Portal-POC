@@ -1,152 +1,64 @@
 {
   "extended": [
     {
-      "displayName": "CountyId",
-      "fieldName": "data.CountyId"
+      "displayName": "ParticipantId",
+      "fieldName": "data.participantId"
     },
     {
-      "displayName": "State",
-      "fieldName": "data.State"
+      "displayName": "BirthSex",
+      "fieldName": "data.birthSex"
     },
     {
-      "displayName": "County",
-      "fieldName": "data.County"
+      "displayName": "Gender",
+      "fieldName": "data.gender"
     },
     {
-      "displayName": "TotalPop",
-      "fieldName": "data.TotalPop"
+      "displayName": "SelfIdentifiedGender",
+      "fieldName": "data.selfIdentifiedGender"
     },
     {
-      "displayName": "Men",
-      "fieldName": "data.Men"
+      "displayName": "TransgenderIdentity",
+      "fieldName": "data.transgenderIdentity"
     },
     {
-      "displayName": "Women",
-      "fieldName": "data.Women"
+      "displayName": "Ancestry",
+      "fieldName": "data.ancestry"
     },
     {
-      "displayName": "Hispanic",
-      "fieldName": "data.Hispanic"
+      "displayName": "SelfReportedGeneticsClinicVisited",
+      "fieldName": "data.selfReportedGeneticsClinicVisited"
     },
     {
-      "displayName": "White",
-      "fieldName": "data.White"
+      "displayName": "SelfReportedMolecularLabVisited",
+      "fieldName": "data.selfReportedMolecularLabVisited"
     },
     {
-      "displayName": "Black",
-      "fieldName": "data.Black"
+      "displayName": "HistoryOfCancer",
+      "fieldName": "data.historyOfCancer"
     },
     {
-      "displayName": "Native",
-      "fieldName": "data.Native"
+      "displayName": "SelfReportedPrimaryCancerDiagnosis",
+      "fieldName": "data.selfReportedPrimaryCancerDiagnosis"
     },
     {
-      "displayName": "Asian",
-      "fieldName": "data.Asian"
+      "displayName": "FamilyHistoryOfCancer",
+      "fieldName": "data.familyHistoryOfCancer"
     },
     {
-      "displayName": "Pacific",
-      "fieldName": "data.Pacific"
+      "displayName": "VitalStatus",
+      "fieldName": "data.vitalStatus"
     },
     {
-      "displayName": "VotingAgeCitizen",
-      "fieldName": "data.VotingAgeCitizen"
+      "displayName": "SelfReportedClinicianFirstName",
+      "fieldName": "data.selfReportedClinicianFirstName"
     },
     {
-      "displayName": "Income",
-      "fieldName": "data.Income"
+      "displayName": "SelfReportedClinicianLastName",
+      "fieldName": "data.selfReportedClinicianLastName"
     },
     {
-      "displayName": "IncomeErr",
-      "fieldName": "data.IncomeErr"
-    },
-    {
-      "displayName": "IncomePerCap",
-      "fieldName": "data.IncomePerCap"
-    },
-    {
-      "displayName": "IncomePerCapErr",
-      "fieldName": "data.IncomePerCapErr"
-    },
-    {
-      "displayName": "Poverty",
-      "fieldName": "data.Poverty"
-    },
-    {
-      "displayName": "ChildPoverty",
-      "fieldName": "data.ChildPoverty"
-    },
-    {
-      "displayName": "Professional",
-      "fieldName": "data.Professional"
-    },
-    {
-      "displayName": "Service",
-      "fieldName": "data.Service"
-    },
-    {
-      "displayName": "Office",
-      "fieldName": "data.Office"
-    },
-    {
-      "displayName": "Construction",
-      "fieldName": "data.Construction"
-    },
-    {
-      "displayName": "Production",
-      "fieldName": "data.Production"
-    },
-    {
-      "displayName": "Drive",
-      "fieldName": "data.Drive"
-    },
-    {
-      "displayName": "Carpool",
-      "fieldName": "data.Carpool"
-    },
-    {
-      "displayName": "Transit",
-      "fieldName": "data.Transit"
-    },
-    {
-      "displayName": "Walk",
-      "fieldName": "data.Walk"
-    },
-    {
-      "displayName": "OtherTransp",
-      "fieldName": "data.OtherTransp"
-    },
-    {
-      "displayName": "WorkAtHome",
-      "fieldName": "data.WorkAtHome"
-    },
-    {
-      "displayName": "MeanCommute",
-      "fieldName": "data.MeanCommute"
-    },
-    {
-      "displayName": "Employed",
-      "fieldName": "data.Employed"
-    },
-    {
-      "displayName": "PrivateWork",
-      "fieldName": "data.PrivateWork"
-    },
-    {
-      "displayName": "PublicWork",
-      "fieldName": "data.PublicWork"
-    },
-    {
-      "displayName": "SelfEmployed",
-      "fieldName": "data.SelfEmployed"
-    },
-    {
-      "displayName": "FamilyWork",
-      "fieldName": "data.FamilyWork"
-    },
-    {
-      "displayName": "Unemployment",
-      "fieldName": "data.Unemployment"
+      "displayName": "SelfReportedClinicianTitleOrRole",
+      "fieldName": "data.selfReportedClinicianTitleOrRole"
     },
     {
       "displayName": "Submission Metadata",

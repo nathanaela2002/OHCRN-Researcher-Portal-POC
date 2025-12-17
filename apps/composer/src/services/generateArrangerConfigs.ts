@@ -373,15 +373,14 @@ export function ArrangerConfigs(
     }
 
     // Process fields with or without a base path
-    Logger.info`Using base path: ${
-      basePath.length ? basePath.join(".") : "(none)"
-    }`;
+    Logger.info`Using base path: ${basePath.length ? basePath.join(".") : "(none)"
+      }`;
 
     // Extract fields to process - if we have a base path, use properties from that field
     const fieldsToProcess =
       basePath.length > 0
         ? (mappingProperties[basePath[0]] as ElasticsearchField).properties ||
-          {}
+        {}
         : mappingProperties;
 
     // Process the fields, passing along the field type map
