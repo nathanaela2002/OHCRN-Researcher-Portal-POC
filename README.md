@@ -39,11 +39,6 @@ Prelude is structured into four incremental phases:
 | --------------------------------------- | --------------------------------------------------- | ----------------------------------------------- |
 | **Phase 0:** Pre-Deployment Check       | Making sure you have all the required prerequisites | Docker, appropriate resources for docker & Node |
 | **Phase 1:** Data Exploration & Theming | Data visualization in the portal                    | Elasticsearch, Arranger, Stage                  |
-| **Phase 2:** Tabular Data Management    | Backend data storage and validation                 | Lyric, Lectern, Postgres, MongoDB               |
-| **Phase 3:** File Management            | File storage and metadata tracking                  | Song, Score, Object Storage                     |
-| **_Phase 4:_** Identity & Access        | Security and user management                        | Keycloak integration                            |
-
-**Phase 4** will be implemented in a future release.
 
 ## Supplemental Tools
 
@@ -78,24 +73,9 @@ As summary of command line client interactions is provided in the table below:
 | ------------- | --------------------------------------------------------------- | ---------------- |
 | **Phase 0**   | Pre-Deployment Check                                            | `make phase0`    |
 | **Phase 1**   | Data Exploration & Theming                                      | `make phase1`    |
-| **Phase 2**   | Tabular Data Management                                         | `make phase2`    |
-| **Phase 3**   | File Management                                                 | `make phase3`    |
 | **Stage Dev** | Run Stage in development mode                                   | `make stage-dev` |
 | **Restart**   | Restart containers for a specific profile while preserving data | `make restart`   |
 | **Reset**     | Reset all containers and volumes                                | `make reset`     |
-
-## Accessing the Portal
-
-Once running, you can access the portal at: [http://localhost:3000](http://localhost:3000)
-
-The documentation found on the portal and within the `/docs` folder is organized into phases matching the Prelude development workflow:
-
-- **Introduction**: Overview of the Prelude toolkit and its components
-- **Phase One**: Data Exploration & Theming (Elasticsearch, Arranger, Stage)
-- **Phase Two**: Tabular Data Management (Lyric, Lectern, Postgres, MongoDB)
-- **Phase Three**: File Management (Song, Score, Object Storage)
-- **Phase Four**: Identity & Access (Coming in future release)
-- **Support**: How to get help and contribute
 
 ## Development
 
@@ -167,7 +147,7 @@ Start the custom-ui development server:
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173` (or the port shown in the terminal).
+The application will be available at `http://localhost:3002`.
 
 #### Creating New Elasticsearch and Arranger Configurations
 
@@ -193,32 +173,8 @@ These commands will:
 After generating new configurations, restart the arranger services to load the new configs:
 
 ```bash
-docker-compose restart arranger-datatable4
+make reset
 ```
-
-### Stage Portal Local Development
-
-To modify the documentation portal itself:
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   cd apps/stage
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-### Updating Documentation Content
-
-Documentation content is stored as Markdown files in the `public/docs` directory. To add or update content:
-
-1. Files are prefixed with numbers (`00-`, `01-`, etc.) to control ordering
-2. Each file should start with a top-level heading (`# Title`)
-3. Place images in `public/docs/images/`
-4. Use standard Markdown syntax for formatting
 
 ## Project Structure
 
@@ -262,17 +218,5 @@ The project follows a modular structure with two main applications: Conductor (f
 └── docs/                         # Symlink to Stage docs
 ```
 
-## Windows Support
 
-Prelude is designed to run in Linux/macOS environments. Windows users should:
 
-1. Install [WSL2 (Windows Subsystem for Linux)](https://learn.microsoft.com/en-us/windows/wsl/install)
-2. Use Ubuntu or another Linux distribution within WSL2
-3. Run all Prelude commands from the Bash terminal in your WSL2 environment
-4. Install Docker Desktop with WSL2 integration enabled
-
-WSL2 provides a full Linux kernel and compatibility layer, allowing you to run Prelude's Linux commands without modification.
-
-## Support
-
-For assistance, reach out via the [community support channels](https://docs.overture.bio/community/support), for private inquiries email us at [contact@overture.bio](mailto:contact@overture.bio).
