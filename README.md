@@ -1,11 +1,4 @@
-# Prelude - Version 1.0.0-beta
-
-Prelude is a toolkit for the planning and development stages of Overture data platform implementation. It helps teams incrementally build and validate platform requirements.
-
-> [!IMPORTANT]
-> Prelude is not intended for production environments. It serves as a preparatory tool to ensure successful production deployments.
-
-We welcome feedback and suggestions—please share them via [our ideas forum](https://github.com/overture-stack/docs/discussions/new?category=ideas).
+# Prelude Custom-UI Researcher Data Exploration Portal
 
 ## Getting Started
 
@@ -52,8 +45,6 @@ Depending on the command Composer can input CSV or JSON file(s) that represent y
 | --------------------------------- | -------------------------------------------------------------------- |
 | **Elasticsearch Mappings**        | Defines the structure and indexing settings for your data            |
 | **Arranger UI Configs**           | Configures the user interface for data exploration and visualization |
-| **Lectern Dictionary and Schema** | Creates data dictionaries and schemas for tabular data               |
-| **Song Schema**                   | Generates schema configurations for file metadata                    |
 
 ### Conductor
 
