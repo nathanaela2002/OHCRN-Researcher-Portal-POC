@@ -175,47 +175,22 @@ After generating new configurations, restart the arranger services to load the n
 make reset
 ```
 
-## Project Structure
+## Custom-UI chart implementation architecture
+At a high level, the architecture consists of three main parts: Custom‑UI (a React + Vite frontend used by researchers), the Arranger API (a GraphQL gateway that translates queries into Elasticsearch requests), and Elasticsearch (the underlying data store that executes searches and aggregations).
+<img width="217" height="616" alt="image" src="https://github.com/user-attachments/assets/2a646ca7-a8e6-4a10-93b5-0e5cf2c2f6ea" />
 
-The project follows a modular structure with two main applications: Conductor (for data management) and Stage (for the front-end portal).
+#### Detailed Flow 
+1. User Interaction: User clicks a bar in a chart (e.g., GenderChart), selects/deselects facet checkboxes in Facets, or clears filters via the QueryBar (SQONViewer).
+2. SQON Update (Filter State): Chart click handlers use chartFilter from sqonHelpers to toggle filters based on the bar’s value, while Facets and SQONViewer call setSQON from the Arranger context.
+3. Context Broadcast: ArrangerDataProvider notifies all used components (charts, facets, query bar) via React Context that the SQON has changed, so they can re-evaluate their data needs.
+4. GraphQL Requests:
+   - Charts: Arranger Charts automatically build a GraphQL aggregation query using each chart’s fieldName (aggregation format, e.g., data__gender) and include the current sqon as filters.
+   - Facets: The Aggregations component reads backend Arranger config (e.g., facets.json) and issues a single GraphQL request for all configured facet fields, filtered by sqon.
+   - Query Bar: Components like QueryBar.tsx (via SQONViewer and Arranger components) rely on the shared Arranger data context, which issues GraphQL requests under the hood to fetch the aggregations needed to display and manage the current filter state.
+5. Arranger Fetcher: Converts the GraphQL query strings into HTTP POST requests and sends them to the Arranger API at /graphql, with the request body containing the GraphQL query and SQON variables.
+6. Arranger API: Receives the HTTP POST request, validates it against its GraphQL schema, and translates the aggregations plus SQON filters into an Elasticsearch aggregation query for the configured index.
+7. Elasticsearch: Executes the aggregation query and returns bucketed results (keys and document counts) to the Arranger API.
 
-```
-├── apps/
-│   ├── composer/                 # Config generation tool
-│   │   └── src/                  # Source code
-│   │       ├── cli/              # CLI interface
-│   │       ├── commands/         # Command implementations
-│   │       ├── services/         # Core functions for config generation
-│   │       └── utils/            # Utility functions
-│   │
-│   ├── conductor/                # Data management tool
-│   │   ├── src/                  # Source code
-│   │   │   ├── cli/              # CLI interface
-│   │   │   ├── commands/         # Command implementations
-│   │   │   ├── services/         # Core services (ES, Lectern, etc.)
-│   │   │   └── utils/            # Utility functions
-│   │   ├── configs/              # Configuration files
-│   │   │   ├── arrangerConfigs/  # Arranger UI configurations
-│   │   │   ├── elasticsearchConfigs/ # Elasticsearch mappings
-│   │   │   ├── lecternDictionaries/ # Data dictionaries
-│   │   │   └── songSchemas/      # Song schemas
-│   │   └── scripts/              # Deployment and service scripts
-│   │       ├── deployments/      # Phase deployment scripts
-│   │       └── services/         # Service management scripts
-│   │
-│   └── stage/                    # Frontend portal
-│       ├── components/
-│       │   ├── pages/            # Page-specific components
-│       │   └── theme/            # Theming
-│       ├── pages/                # Next.js pages
-│       └── public/               # Static assets
-│           └── docs/             # Markdown documentation files
-│               └── images/       # Documentation images
-│
-├── configs/                      # Symlink to conductor configs
-├── data/                         # Data files
-└── docs/                         # Symlink to Stage docs
-```
-
+<img width="2042" height="1286" alt="image" src="https://github.com/user-attachments/assets/b76f35ec-6e55-4c2a-a01f-ad3289bf1c83" />
 
 
