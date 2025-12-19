@@ -183,13 +183,13 @@ At a high level, the architecture consists of three main parts: Custom‑UI (a R
 ```
 ┌─────────────────┐
 │   Custom UI     │  React + Vite frontend
-│   (port 3000)   │  Interactive charts & filters
+│   (port 3002)   │  Interactive charts & filters
 └────────┬────────┘
          │ GraphQL
          v
 ┌─────────────────┐
 │    Arranger     │  GraphQL API gateway
-│   (port 5050)   │  Query translation
+│   (port 5053)   │  Query translation
 └────────┬────────┘
          │ REST API
          v
