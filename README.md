@@ -180,7 +180,24 @@ make reset
 ## Custom-UI Charts Implementation Architecture
 At a high level, the architecture consists of three main parts: Custom‑UI (a React + Vite frontend used by researchers), the Arranger API (a GraphQL gateway that translates queries into Elasticsearch requests), and Elasticsearch (the underlying data store that executes searches and aggregations).
 
-<img width="217" height="616" alt="image" src="https://github.com/user-attachments/assets/2a646ca7-a8e6-4a10-93b5-0e5cf2c2f6ea" />
+```
+┌─────────────────┐
+│   Custom UI     │  React + Vite frontend
+│   (port 3000)   │  Interactive charts & filters
+└────────┬────────┘
+         │ GraphQL
+         v
+┌─────────────────┐
+│    Arranger     │  GraphQL API gateway
+│   (port 5050)   │  Query translation
+└────────┬────────┘
+         │ REST API
+         v
+┌─────────────────┐
+│ Elasticsearch   │  Search & aggregation engine
+│   (port 9200)   │  Data storage
+└─────────────────┘
+```
 
 #### Detailed Flow 
 1. User Interaction: User clicks a bar in a chart (e.g., GenderChart), selects/deselects facet checkboxes in Facets, or clears filters via the QueryBar (SQONViewer).
